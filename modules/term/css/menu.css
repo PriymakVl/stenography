@@ -1,0 +1,31 @@
+#main-menu-order-wrp {
+    position: absolute;
+    top: 90px;
+    left: -160px;
+    /*background: #fff;*/
+    /*border: 1px solid #000;*/
+}
+
+#main-menu-order-wrp ul li{
+    margin-top: 3px;
+	cursor: pointer;
+	color: #000;
+	text-decoration: underline;
+}
+
+#main-menu-order-wrp ul li:hover {
+	text-decoration: none;
+}
+
+#main-menu-order-wrp ul li a{
+    color: #000;
+}
+
+#main-menu-order-wrp ul li a:hover {
+	text-decoration: none;
+}
+
+#menu-order-actions-wrp li:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}

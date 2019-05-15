@@ -1,0 +1,19 @@
+#order-index-wrp table {
+    width: 898px;
+}
+
+#table-order-positions {
+	margin-top: 15px;
+}
+
+#table-order-positions caption {
+	font-size: 18px;
+}
+
+.position-menagment-box a {
+	font-size: 12px;
+}
+
+#order-products-wrp .control-link {
+	font-size: 10px;
+}

@@ -1,0 +1,107 @@
+body {
+  background: #373737 url("/web/images/bg_terminal.png") 0 0 repeat;
+  padding: 0;
+  margin: 0;
+}
+
+#terminal-wrp {
+	width: 842px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+#terminal-wrp h3 {
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+
+#terminal-wrp h3 span {
+	color: black;
+}
+
+.terminal-info {
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	color: white;
+	border-bottom: 1px solid black;
+	padding-left: 20px;
+	position: relative;
+}
+
+#terminal-clock {
+	font-size: 200px;
+	text-align: center;
+	/*transform: translateX(-50%) translateY(-50%);*/
+	color: #17D4FE;
+	font-family: Orbitron serif;
+	letter-spacing: 7px;
+}
+
+#terminal-actions-wrp,  #terminal-actions-unplan-wrp {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#terminal-actions-wrp:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.terminal-action-box {
+	width: 250px;
+	height: 150px;
+	margin-right: 20px;
+	margin-top: 20px;
+	border: 2px solid white;
+	float: left;
+	position: relative;
+	color: black;
+}
+
+.terminal-action-box:nth-child(3) {
+	margin-right: 0;
+}
+
+.terminal-action-box:hover {
+	cursor: pointer;
+	border: 2px solid red;
+}
+
+.exit-link {
+	position: absolute;
+	color: white;
+	top: 0;
+	right: 10px;
+}
+
+.orders-link {
+	position: fixed;
+	color: white;
+	top: 10px;
+	left: 10px;
+}
+
+
+.info-order {
+	padding: 5px;
+}
+
+.info-product {
+	position: absolute;
+	font-size: 20px;
+	top: 35%;
+	left: 5px;
+}
+
+.info-state {
+	position:absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+#actions-info-product {
+	margin: 20px 0 20px 0;
+}
