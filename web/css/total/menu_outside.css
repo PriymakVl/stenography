@@ -1,4 +1,4 @@
-.menu-sidebar-wrp {
+.menu-outside-wrp {
     position: absolute;
     top: 90px;
     left: -160px;
@@ -6,10 +6,10 @@
     /*border: 1px solid #000;*/
 }
 
-.menu-sidebar-wrp ul li{
+.menu-outside-wrp ul li{
     margin-top: 3px;
 }
 
-.menu-sidebar-wrp ul li a{
+.menu-outside-wrp ul li a{
     color: #000;
 }

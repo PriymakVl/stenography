@@ -34,7 +34,7 @@ trait ModelStatic {
 	}
 		
 
-    protected static function bildSelect($params, $table_name, $sql = null)
+    protected static function buildSelect($params, $table_name, $sql = null)
     {
         if ($sql) $sql = $sql.$table_name;
         else $sql = 'SELECT * FROM '.$table_name;
@@ -42,7 +42,7 @@ trait ModelStatic {
         return $sql.$where;
     }
 
-    protected static function bildWhere($params)
+    protected static function buildWhere($params)
     {
         if (empty($params)) return '';
         $where = ' WHERE ';
@@ -63,6 +63,16 @@ trait ModelStatic {
 	{
 		$sql = 'SELECT MAX(id) AS id FROM '.$table;
 		return self::perform($sql)->fetchColumn();
+	}
+	
+	public static function build($id, array $methods = null)
+	{
+		$class = get_called_class();
+		$data = (new $class)->getData($id);
+		if (!$data) return;
+		$obj = (new $class)->setData($data);
+		if ($methods) return ObjectHelper::callMethodsObject($obj, $methods);
+		return $obj;
 	}
 	
 }

@@ -2,7 +2,7 @@
 
 class ObjectHelper {
 
-    public static function createArray($items, $class_name, $methods = false)
+    public static function factory($items, $class_name, $methods = false)
     {
         $objects = [];
         if (empty($items)) return $objects;
@@ -20,7 +20,7 @@ class ObjectHelper {
 		return $object;
 	}
 	
-	private static function  callMethodsObject($object, $methods) 
+	public static function  callMethodsObject($object, $methods) 
 	{
 		foreach ($methods as $method_name) {
 			if ($method_name == 'setData') continue;

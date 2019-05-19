@@ -1,10 +1,11 @@
-<table class="list-terms" width="940">
+<table class="list-words" width="940">
     <tr>
         <th width="40">
             <input type="checkbox" disabled>
         </th>
         <th width="200">Наименование</th>
         <th>Начертание</th>
+		<th>Правила</th>
     </tr>
     <? if ($terms): ?>
         <?foreach ($terms as $term): ?>
@@ -15,14 +16,16 @@
                 <td>
                     <a href="/term?id_term=<?=$term->id?>"><?=$term->name?></a>
                 </td>
-				<td><?=$term->name?></td>
-				<td>
+				<td class="term-images-td">
 					<? if ($term->images): ?>
-						<img src="/web/images/terms/<?=$term->images[0]->file?>">
+						<? foreach ($term->images as $image): ?>
+							<img src="/web/terms/<?=$image->file?>">&nbsp;&nbsp;
+						<? endforeach; ?>
 					<? else: ?>
-						<span class="red
+						<span class="red">нет</span>
 					<? endif; ?>
 				</td>
+				<td><span class="red">нет</span></td>
             </tr>
         <? endforeach; ?>
     <? else: ?>

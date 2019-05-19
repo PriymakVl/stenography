@@ -11,9 +11,9 @@
 
     <!-- message -->
     <? include_once('./views/total/message.php'); ?>
-
+	
     <!-- term list -->
-    <? include_once('list.php'); ?>
+    <? if ($this->get->type == Term::TYPE_WORD) include_once('words.php'); ?>
 
 
 </div>

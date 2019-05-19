@@ -1,8 +1,8 @@
 <?php
 
-class Order extends OrderBase {
+class Term extends TermBase {
 	
-	use TermModel;
+	use TermModel, TermList;
 	
 	public function getImages()
 	{
@@ -24,8 +24,8 @@ class Order extends OrderBase {
 	
 	public function search()
 	{
-		$items = $this->searchByName();
-		if ($items) return ObjectHelper::createArray($items, 'Term', ['setData', 'getImages']);
+		$items = $this->searchByNameModel();
+		if ($items) return ObjectHelper::factory($items, 'Term', ['setData', 'getImages']);
 	}
 	
 

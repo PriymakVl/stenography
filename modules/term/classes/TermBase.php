@@ -1,6 +1,6 @@
 <?php
 
-class OrderBase extends Model {
+class TermBase extends Model {
 	
 	const TYPE_ALL = 'all';
 	const TYPE_LETTER = 1;
