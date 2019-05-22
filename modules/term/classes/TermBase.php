@@ -9,6 +9,7 @@ class TermBase extends Model {
     const TYPE_PHRASE = 4; 
 	
 	public $images;
+	public $typeString;
 	
 	
 	public function __construct($id = false)

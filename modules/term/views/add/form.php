@@ -11,16 +11,16 @@
 		<div class="form-box">
 			<label>Тип:</label>
 			<select name="type">
-				 <option value="<?=Term::TYPE_LETTER?>">Буквы</option>
-				<option value="<?=Term::TYPE_PART_WORD?>">Слоги</option>
-				<option value="<?=Term::WORD?>">Слова</option>
-				<option value="<?=Term::TYPE_PHRASE?>">Предложения</option>
+				 <option value="<?=Term::TYPE_LETTER?>">Буква</option>
+				<option value="<?=Term::TYPE_PART_WORD?>">Слог</option>
+				<option value="<?=Term::TYPE_WORD?>" selected>Слово</option>
+				<option value="<?=Term::TYPE_PHRASE?>">Предложение</option>
 			</select>
         </div>
 
         <!-- buttons -->
         <div class="button-box">
-            <input type="submit" value="Сохранить" id="add-order" name="save">
+            <input type="submit" value="Сохранить" name="save">
             <input type="button" onclick="history.back();" value="Отменить">
         </div>
     </form>

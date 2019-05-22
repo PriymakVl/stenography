@@ -6,15 +6,15 @@ trait TermModel {
 
     public function addDataModel()
     {
-		$params = self::getParams(['name', 'type', 'state']);
-        $sql = 'INSERT INTO `orders` (name, type, state) VALUES (:name, :type, :state)';
+		$params = self::selectParams(['name', 'type']);
+        $sql = 'INSERT INTO `terms` (name, type) VALUES (:name, :type)';
 		return self::insert($sql, $params);
     }
 	
 	public function editDataModel()
 	{
-		$params = self::getParams(['id_term', 'name', 'type', 'state']);
-		$sql = 'UPDATE `orders` SET `name` = :name, `type` = :type, `state` = :state WHERE `id` = :id_term';
+		$params = self::selectParams(['id_term', 'name', 'type']);
+		$sql = 'UPDATE `terms` SET `name` = :name, `type` = :type WHERE `id` = :id_term';
 		return self::update($sql, $params);
 	}
 	

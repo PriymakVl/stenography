@@ -1,7 +1,7 @@
 <div class="menu-outside-wrp">
     <ul>
 		<li>
-            <a href="/term/edit?id_term=<?=$term->id?>">Редактировать термин</a>
+            <a href="/term/edit?id_term=<?=$term->id?>">Редакт-ть термин</a>
         </li>
         <li>
             <a href="#" id_term="<?=$term->id?>" id="delete-term">Удалить Термин</a>

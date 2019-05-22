@@ -14,6 +14,9 @@
 	
     <!-- term list -->
     <? if ($this->get->type == Term::TYPE_WORD) include_once('words.php'); ?>
+	
+	<!-- menu -->
+    <? include_once('menu.php'); ?>
 
 
 </div>

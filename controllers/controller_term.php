@@ -18,14 +18,22 @@ class Controller_Term extends Controller_Base {
 	
 	public function action_index()
 	{
-		$term = Term::build($this->get->id_term, ['getImages']);
+		$term = Term::build($this->get->id_term, ['getImages', 'setTypeString']);
 		$this->render('index/main', compact('term'));
 	}
 
 	public function action_add()
     {
 		if (!$this->post->save) return $this->render('add/main');
-		$term = (new Term)->add()->setMessage('success', 'add');
+		$term = (new Term)->addData()->setMessage('success', 'add');
+		$this->redirect('term?id_term='.$term->id);
+    }
+	
+	public function action_edit()
+    {
+		$term = new Term($this->get->id_term);
+		if (!$this->post->save) return $this->render('edit/main', compact('term'));
+		$term->editData()->setMessage('success', 'edit');
 		$this->redirect('term?id_term='.$term->id);
     }
 	

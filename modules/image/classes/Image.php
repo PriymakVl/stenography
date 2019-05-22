@@ -14,7 +14,7 @@ class Image extends Model {
 	public function add ()
 	{
 		try {
-			return $this->addFile()->setMessage('success', 'add');
+			$res = $this->addFile()->setMessage('success', 'add');
 		}
 		catch (Exception $e) {
 			$this->setMessage('error', $e->getMessage());
@@ -22,13 +22,15 @@ class Image extends Model {
 		} 
 	}
 	
-	
 	public function addFile()
 	{
 		$file = $this->saveFile();
 		if (!$file) throw new Exception('add_error'); 
 		$id_img = $file ? $this->addDataModel($this->params->id_term) : false;
-		if ($id_img) return self::build($id_img)->editFileModel($file);
+		if (!$id_img) throw new Exception('add_error');
+		$img = self::build($id_img);
+		$img->editFileModel($file);
+		return $img;
 	}
 	
 

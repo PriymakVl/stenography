@@ -2,7 +2,7 @@
 
 class Term extends TermBase {
 	
-	use TermModel, TermList;
+	use TermModel, TermList, TermConvert;
 	
 	public function getImages()
 	{

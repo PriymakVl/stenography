@@ -1,47 +1,26 @@
-<div id="form-order-wrp">
-    <h2>Форма для редактирования заказа</h2>
-    <form action="/order/edit?id_order=<?=$order->id?>" method="post">
-        <!-- first box -->
+<div id="form-term-wrp">
+    <h2>Форма для редактирования слов и фраз</h2>
+    <form action="/term/edit?id_term=<?=$term->id?>" method="post">
+        <!-- term name-->
         <div class="form-box">
-            <!-- order symbol-->
-            <div id="form-order-symbol-wrp">
-                <label>Обозначение заказа:</label>
-                <input type="text" name="symbol" value="<?=$order->symbol?>">
-            </div>
-
-            <!-- type orders-->
-            <div id="form-order-type-wrp">
-                <label>Тип заказа:</label>
-                <select name="type">
-                    <option value="<?=Order::TYPE_CYLINDER?>" <? if ($order->symbol == Order::TYPE_CYLINDER) echo 'selected';?>>Пневмоцилиндры</option>
-                    <option value="<?=Order::TYPE_CAR_NUMBER?>" <? if ($order->symbol == Order::TYPE_CAR_NUMBER) echo 'selected';?>>Автономера</option>
-                </select>
-            </div>
-
-            <!-- date execution-->
-            <div id="form-order-date-wrp">
-                <label>Срок выполнения:</label>
-                <input type="text" name="date_exec" class="datepicker" value="<?if ($order->date_exec) echo date('d.m.y', $order->date_exec);?>" autocomplete="off">
-            </div>
-        </div>
-		
-		<div class="form-box">
-			<!-- rating order -->
-			<div>
-				<label>Рейтинг:</label>
-				<input type="text" name="rating" value="<?=$order->rating?$order->rating:0?>">
-			</div>
+			<label>Нименование:</label>
+			<input type="text" name="name" value="<?=$term->id?>" required>
 		</div>
-
-        <!-- note -->
-        <div id="form-order-note-wrp" class="form-box">
-            <label>Примечание:</label>
-            <textarea name="note"><?=$order->note?></textarea>
+		
+		<!-- type term-->
+		<div class="form-box">
+			<label>Тип:</label>
+			<select name="type">
+				 <option value="<?=Term::TYPE_LETTER?>" <? if ($term->type == Term::TYPE_LETTER) echo 'selected'?>>Буква</option>
+				<option value="<?=Term::TYPE_PART_WORD?>" <? if ($term->type == Term::TYPE_PART_WORD) echo 'selected'?>>Слог</option>
+				<option value="<?=Term::TYPE_WORD?>" <? if ($term->type == Term::TYPE_WORD) echo 'selected'?>>Слово</option>
+				<option value="<?=Term::TYPE_PHRASE?>" <? if ($term->type == Term::TYPE_PHRASE) echo 'selected'?>>Предложение</option>
+			</select>
         </div>
 
         <!-- buttons -->
         <div class="button-box">
-            <input type="submit" value="Сохранить" id="form-order" name="save">
+            <input type="submit" value="Сохранить" name="save">
             <input type="button" onclick="history.back();" value="Отменить">
         </div>
     </form>

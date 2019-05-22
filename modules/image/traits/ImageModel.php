@@ -18,7 +18,7 @@ trait ImageModel  {
 	protected function editFileModel($file)
 	{
 		$params = ['id_img' => $this->id, 'file' => $file];
-		$sql = 'UPDATE `images` SET `file` = :file WHERE `id` = :id_dwg';
+		$sql = 'UPDATE `images` SET `file` = :file WHERE `id` = :id_img';
 		return self::update($sql, $params); 
 	}
     

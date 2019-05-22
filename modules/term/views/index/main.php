@@ -1,5 +1,5 @@
 <!-- css files -->
-<link rel="stylesheet" href="/modules/order/css/index.css">
+<link rel="stylesheet" href="/modules/term/css/index.css">
 
 <div id="content">
 
@@ -15,4 +15,5 @@
 </div>
 
 <!-- js files -->
+<script src="/modules/term/js/delete_term.js"></script>
 
