@@ -5,7 +5,7 @@
         </th>
         <th width="200">Наименование</th>
         <th>Начертание</th>
-		<th>Правила</th>
+		<th>Управление</th>
     </tr>
     <? if ($terms): ?>
         <?foreach ($terms as $term): ?>
@@ -25,7 +25,9 @@
 						<span class="red">нет</span>
 					<? endif; ?>
 				</td>
-				<td><span class="red">нет</span></td>
+				<td>
+					<a href="#" id="show-images">Показать</span>
+				</td>
             </tr>
         <? endforeach; ?>
     <? else: ?>
