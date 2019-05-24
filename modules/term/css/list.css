@@ -42,7 +42,10 @@
 
 .term-images-td {
 	text-align: left;
-	visibility: hidden;
+}
+
+.term-images-td img {
+	/* visibility: hidden; */
 }
 
 

@@ -36,3 +36,4 @@
         </tr>
     <? endif; ?>
 </table>
+<img src="/web/terms/<?='1.jpg'?>" id="test">

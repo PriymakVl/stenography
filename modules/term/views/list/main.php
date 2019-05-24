@@ -22,6 +22,6 @@
 </div>
 
 <!-- js files -->
-<script src="/web/term/js/show_term.js"></script>
+<script src="/modules/term/js/show_term.js"></script>
 
 
