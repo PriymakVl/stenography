@@ -45,7 +45,7 @@
 }
 
 .term-images-td img {
-	/* visibility: hidden; */
+	display:none;
 }
 
 

@@ -29,6 +29,13 @@ class Controller_Term extends Controller_Base {
 		$this->redirect('term?id_term='.$term->id);
     }
 	
+	public function action_add_list()
+	{
+		$files = scandir('./web/temp');
+		(new Term)->addList($files)->->setMessage('success', 'add_list');
+		$this->redirect();
+	}
+	
 	public function action_edit()
     {
 		$term = new Term($this->get->id_term);

@@ -26,7 +26,7 @@
 					<? endif; ?>
 				</td>
 				<td>
-					<a href="#" id="show-images">Показать</span>
+					<!-- <a href="#" id="show-images">Показать</span> -->
 				</td>
             </tr>
         <? endforeach; ?>
@@ -36,4 +36,3 @@
         </tr>
     <? endif; ?>
 </table>
-<img src="/web/terms/<?='1.jpg'?>" id="test">
