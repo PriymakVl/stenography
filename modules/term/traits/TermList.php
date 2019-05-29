@@ -9,6 +9,19 @@ trait TermList {
 		if ($items) return ObjectHelper::factory($items, 'Term', ['setData', 'getImages',]);
 	}
 	
+	public function addList($files)
+	{
+		for ($i = 2; $i < count($files); $i++) {
+			$arr = explode('.', $files[$i]);
+			$params = ['name' => $arr[0], 'type' => $this->get->type];
+			$id_term = (new self)->addDataModel($params);
+			rename('./temp/'.$files[$i], './terms/'.$id_term.'.'.$arr[1]);
+			$id_img = (new Image)->addDataModel($id_term);
+			(new Image)->setData($id_img)->editFileModel($id_term.'.'.$arr[1]);
+			debug('exit');
+		}
+	}
+	
 }
 
 

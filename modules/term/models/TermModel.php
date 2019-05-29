@@ -4,9 +4,9 @@ trait TermModel {
 	
 	use TermModelSelect;
 
-    public function addDataModel()
+    public function addDataModel($params)
     {
-		$params = self::selectParams(['name', 'type']);
+		$params = $params ? $params : self::selectParams(['name', 'type']);
         $sql = 'INSERT INTO `terms` (name, type) VALUES (:name, :type)';
 		return self::insert($sql, $params);
     }

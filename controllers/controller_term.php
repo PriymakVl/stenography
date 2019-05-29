@@ -32,7 +32,7 @@ class Controller_Term extends Controller_Base {
 	public function action_add_list()
 	{
 		$files = scandir('./web/temp');
-		(new Term)->addList($files)->->setMessage('success', 'add_list');
+		(new Term)->addList($files)->setMessage('success', 'add_list');
 		$this->redirect();
 	}
 	
