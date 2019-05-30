@@ -11,9 +11,17 @@ trait TermList {
 	
 	public function addList($files)
 	{
+		debug($files);
 		for ($i = 2; $i < count($files); $i++) {
+
 			$arr = explode('.', $files[$i]);
-			$params = ['name' => $arr[0], 'type' => $this->get->type];
+			debug($arr[0]);
+			$name = iconv('KOI8-R', 'utf-8', $arr[0]);
+			echo $name;
+			exit();
+			debug($name);
+			$params = ['name' => $name, 'type' => $this->get->type];
+			debug($params);
 			$id_term = (new self)->addDataModel($params);
 			rename('./temp/'.$files[$i], './terms/'.$id_term.'.'.$arr[1]);
 			$id_img = (new Image)->addDataModel($id_term);
@@ -21,6 +29,7 @@ trait TermList {
 			debug('exit');
 		}
 	}
+
 	
 }
 

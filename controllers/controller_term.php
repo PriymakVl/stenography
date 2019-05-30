@@ -32,6 +32,8 @@ class Controller_Term extends Controller_Base {
 	public function action_add_list()
 	{
 		$files = scandir('./web/temp');
+		// $files = glob("./web/term/*.jpg");
+		debug($files);
 		(new Term)->addList($files)->setMessage('success', 'add_list');
 		$this->redirect();
 	}
