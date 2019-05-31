@@ -11,23 +11,19 @@ trait TermList {
 	
 	public function addList($files)
 	{
-		debug($files);
 		for ($i = 2; $i < count($files); $i++) {
-
 			$arr = explode('.', $files[$i]);
-			debug($arr[0]);
-			$name = iconv('KOI8-R', 'utf-8', $arr[0]);
-			echo $name;
-			exit();
+			$name = $arr[0];
+			// mb_convert_encoding($name, 'utf-8');
+			// var_dump(mb_check_encoding  ($name));
 			debug($name);
-			$params = ['name' => $name, 'type' => $this->get->type];
-			debug($params);
+			$params = ['name' => $arr[0], 'type' => $this->get->type];
 			$id_term = (new self)->addDataModel($params);
-			rename('./temp/'.$files[$i], './terms/'.$id_term.'.'.$arr[1]);
-			$id_img = (new Image)->addDataModel($id_term);
-			(new Image)->setData($id_img)->editFileModel($id_term.'.'.$arr[1]);
-			debug('exit');
+			// rename('./temp/'.$files[$i], './terms/'.$id_term.'.'.$arr[1]);
+			// $id_img = (new Image)->addDataModel($id_term);
+			// (new Image)->setData($id_img)->editFileModel($id_term.'.'.$arr[1]);
 		}
+			debug('exit');
 	}
 
 	
