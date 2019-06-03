@@ -19,7 +19,7 @@
 				<td class="term-images-td">
 					<? if ($term->images): ?>
 						<? foreach ($term->images as $image): ?>
-							<img src="/web/terms/<?=$image->file?>">&nbsp;&nbsp;
+							<img src="/terms/<?=$image->file?>">&nbsp;&nbsp;
 						<? endforeach; ?>
 					<? else: ?>
 						<span class="red">нет</span>
@@ -32,7 +32,7 @@
         <? endforeach; ?>
     <? else: ?>
         <tr>
-            <td colspan="3" class="red">Нет ничего</td>
+            <td colspan="4" class="red">Нет ничего</td>
         </tr>
     <? endif; ?>
 </table>

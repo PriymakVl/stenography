@@ -13,18 +13,27 @@ trait TermList {
 	{
 		for ($i = 2; $i < count($files); $i++) {
 			$arr = explode('.', $files[$i]);
-			$name = $arr[0];
-			// mb_convert_encoding($name, 'utf-8');
-			// var_dump(mb_check_encoding  ($name));
-			debug($name);
-			$params = ['name' => $arr[0], 'type' => $this->get->type];
-			$id_term = (new self)->addDataModel($params);
-			// rename('./temp/'.$files[$i], './terms/'.$id_term.'.'.$arr[1]);
-			// $id_img = (new Image)->addDataModel($id_term);
-			// (new Image)->setData($id_img)->editFileModel($id_term.'.'.$arr[1]);
-		}
-			debug('exit');
+			$name = mb_convert_encoding($arr[0], "utf-8", "windows-1251");
+			
+			$term = $this->getByNameModel($name);
+			if ($term) $id_term = $term->id;
+			else {
+				$params = ['name' => $name, 'type' => $this->get->type];
+				$id_term = (new self)->addDataModel($params);
+			}
+			$this->moveImage($id_term, $files[$i], $arr[1]);
+		}	
+		return $this;
 	}
+
+	private function moveImage($id_term, $file, $extension)
+	{
+		$id_img = (new Image)->addDataModel($id_term);
+		(new Image)->setData($id_img)->editFileModel($id_img.'.'.$extension);
+		rename('./web/temp/'.$file, './terms/'.$id_img.'.'.$extension);
+	}
+
+
 
 	
 }
