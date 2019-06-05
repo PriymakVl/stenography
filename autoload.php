@@ -20,6 +20,7 @@ function autoload_core_trait ($class_name)
 		case 'ModelStatic': return require './core/traits/ModelStatic.php';
 		case 'Param': return require './core/traits/Param.php';
 		case 'SelectProperty': return require './core/traits/SelectProperty.php';
+		case 'Pagination': return require './core/traits/Pagination.php';
 	}
 }
 

@@ -6,6 +6,7 @@ trait TermList {
 	{
 		$type = $this->get->type ? $this->get->type : self::TYPE_WORD;
 		$items = $this->getByTypeModel($type);
+		if ($items) $items = $this->getPagination($items, 2);
 		if ($items) return ObjectHelper::factory($items, 'Term', ['setData', 'getImages',]);
 	}
 	
