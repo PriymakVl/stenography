@@ -2,11 +2,11 @@
 
 trait TermList {
 
-	public function getList()
+	public function getList($pagination)
 	{
 		$type = $this->get->type ? $this->get->type : self::TYPE_WORD;
 		$items = $this->getByTypeModel($type);
-		if ($items) $items = $this->getPagination($items, 2);
+		if ($items) $items = $this->selectDataForPage($items, $pagination);
 		if ($items) return ObjectHelper::factory($items, 'Term', ['setData', 'getImages',]);
 	}
 	

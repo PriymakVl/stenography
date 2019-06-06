@@ -12,8 +12,9 @@ class Controller_Term extends Controller_Base {
 	
 	public function action_list()
 	{
-		$terms = (new Term)->getList();
-		$this->render('list/main', compact('terms'));
+		$pagination = (new Term)->getPagination(2);
+		$terms = (new Term)->getList($pagination);
+		$this->render('list/main', compact('pagination', 'terms'));
 	}
 	
 	public function action_index()
