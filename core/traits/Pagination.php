@@ -17,8 +17,8 @@ trait Pagination {
 	{
 		$pagination = ['link' => ''];
 		$pagination['page'] = $this->get->page ? $this->get->page : 1;
-		$pagination['start'] = ($pagination['page'] == 1) ? 0 : $pagination['page'] * $per_page;
-		$pagination['end'] = ($pagination['page'] == 1) ? $per_page : $pagination['page'] * $per_page;
+		$pagination['start'] = ($pagination['page'] - 1) * $per_page;
+		$pagination['end'] = $pagination['page'] * $per_page;
 		return (object) $pagination;
 	} 
 
