@@ -12,7 +12,10 @@ class Controller_Term extends Controller_Base {
 	
 	public function action_list()
 	{
-		$pagination = (new Term)->getPagination(7);
+		// debug($_SERVER['REQUEST_URI']);
+		$query = parse_url($_SERVER['REQUEST_URI']);
+		debug($query);
+		$pagination = (new Term)->getPagination(2);
 		$terms = (new Term)->getList($pagination);
 		$this->render('list/main', compact('pagination', 'terms'));
 	}
