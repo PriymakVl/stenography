@@ -18,6 +18,9 @@
 	<!-- menu -->
     <? include_once('menu.php'); ?>
 
+    <!-- pagination -->
+    <?=$pagination->links?>
+
 
 </div>
 
