@@ -4,7 +4,7 @@
         <!-- term name-->
         <div class="form-box">
 			<label>Нименование:</label>
-			<input type="text" name="name" value="<?=$term->id?>" required>
+			<input type="text" name="name" value="<?=$term->name?>" required>
 		</div>
 		
 		<!-- type term-->
