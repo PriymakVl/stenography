@@ -23,9 +23,10 @@ trait Pagination {
 	{
 		$pagination['page'] = $this->get->page ? $this->get->page : 1;
 		$pagination['start'] = ($pagination['page'] - 1) * $limit;
-		$pagination['end'] = $pagination['page'] * $limit;
+		$pagination['end'] = ($pagination['page'] * $limit) - 1;
 		$pagination['limit'] = $limit;//number items of displayed on the page
 		$pagination['all'] = ceil(count($data) / $limit);//all pages
+		$pagination['total'] = count($data);//total quntity items 
 		$pagintion['links'] = '';
 		return (object) $pagination;
 	} 
@@ -42,23 +43,23 @@ trait Pagination {
 	{
     	$html = '<div class="pagination">';
     	if ($this->pagination->page - 2 != 1 && $this->pagination->page - 1 != 1 && $this->pagination->page != 1) {
-    		$html .= sprintf('<a href="%s">Предыдущая</a>...',  Url::changeGetValue('page', $this->pagination->page - 1));
-    		$html .= sprintf('<a href="%s">%s</a>...',  Url::changeGetValue('page', 1), 1);
+    		$html .= sprintf('<a href="%s">&laquo;</a>',  Url::changeGetValue('page', $this->pagination->page - 1));
+    		$html .= sprintf('<a href="%s">%s</a>',  Url::changeGetValue('page', 1), 1);
     	}
     	if ($this->pagination->page - 2 > 0) $html .= sprintf('<a href="%s">%s</a>', Url::changeGetValue('page', $this->pagination->page - 2), $this->pagination->page - 2);
     	if ($this->pagination->page - 1 > 0) $html .= sprintf('<a href="%s">%s</a>', Url::changeGetValue('page', $this->pagination->page - 1), $this->pagination->page - 1);
 
-    	$html .= sprintf('...<a href="%s" class="active">%s</a>...', Url::changeGetValue('page', $this->pagination->page), $this->pagination->page);
+    	$html .= sprintf('<a href="%s" class="active">%s</a>', Url::changeGetValue('page', $this->pagination->page), $this->pagination->page);
     	
-    	if ($this->pagination->page + 1 * $this->pagination->limit < $this->pagination->all) {
+    	if (($this->pagination->page + 1) * $this->pagination->limit <= $this->pagination->total) {
     		$html .= sprintf('<a href="%s">%s</a>', Url::changeGetValue('page', $this->pagination->page + 1), $this->pagination->page + 1);
 		} 
-		if ($this->pagination->page + 2 * $this->pagination->limit < $this->pagination->all) {
+		if (($this->pagination->page + 2) * $this->pagination->limit < $this->pagination->total) {
     		$html .= sprintf('<a href="%s">%s</a>', Url::changeGetValue('page', $this->pagination->page + 2), $this->pagination->page + 2);
 		} 
 		if ($this->pagination->page != $this->pagination->all && $this->pagination->page + 1 != $this->pagination->all && $this->pagination->page = 2 != $this->pagination->all) {
-    		$html .= sprintf('...<a href="%s">%s</a>', Url::changeGetValue('page', $this->pagination->all), $this->pagination->all);
-    		$html .= sprintf('...<a href="%s">Следующая</a>', Url::changeGetValue('page', $this->pagination->page + 1));
+    		$html .= sprintf('<a href="%s">%s</a>', Url::changeGetValue('page', $this->pagination->all), $this->pagination->all);
+    		$html .= sprintf('<a href="%s">&raquo;</a>', Url::changeGetValue('page', $this->pagination->page + 1));
 		} 
     	return $html .= '</div>';
 	}

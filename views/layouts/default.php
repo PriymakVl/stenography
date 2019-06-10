@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/web/css/total/template.css">
     <link rel="stylesheet" href="/web/css/total/main_menu.css">
     <link rel="stylesheet" href="/web/css/total/menu_outside.css">
+    <link rel="stylesheet" href="/web/css/total/pagination.css">
     <link rel="stylesheet" href="/web/css/total/jquery-ui.css">
     <script src="/web/js/jquery-3.3.1.min.js"></script>
     <script src="/web/js/jquery-ui.js"></script>

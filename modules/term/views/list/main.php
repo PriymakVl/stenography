@@ -19,9 +19,10 @@
     <? include_once('menu.php'); ?>
 
     <!-- pagination -->
-    <?=$pagination->links?>
-
-
+    <div class="pagination-wrp">
+       <?=$pagination->links?> 
+    </div>
+    
 </div>
 
 <!-- js files -->

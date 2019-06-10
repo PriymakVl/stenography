@@ -1,9 +1,3 @@
-/* #search-list-orders-wrp { */
-    /* margin-left: 15px; */
-/* } */
-
-
-
 #term-filters-wrp {
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
@@ -46,6 +40,14 @@
 
 .term-images-td img {
 	display:none;
+}
+
+.pagination-wrp {
+    text-align: center;
+}
+
+.list-words {
+    margin-bottom: 20px;
 }
 
 
