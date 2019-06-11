@@ -13,9 +13,14 @@ class Controller_Term extends Controller_Base {
 	public function action_list()
 	{
 		$obj = new Term;
-		$terms = $obj->getList(5);
+		$terms = $obj->getList(2);
 		$pagination = $obj->getPagination();
 		$this->render('list/main', compact('pagination', 'terms'));
+	}
+
+	public function action_options()
+	{
+		debug($_GET);
 	}
 	
 	public function action_index()

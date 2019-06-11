@@ -4,8 +4,7 @@
             <input type="checkbox" disabled>
         </th>
         <th width="200">Наименование</th>
-        <th>Начертание</th>
-		<th>Управление</th>
+        <th>Изображения</th>
     </tr>
     <? if ($terms): ?>
         <?foreach ($terms as $term): ?>
@@ -24,9 +23,6 @@
 					<? else: ?>
 						<span class="red">нет</span>
 					<? endif; ?>
-				</td>
-				<td>
-					<!-- <a href="#" id="show-images">Показать</span> -->
 				</td>
             </tr>
         <? endforeach; ?>
