@@ -1,3 +1,7 @@
+<?php 
+    $type = $this->session->type ? $this->session->type : Term::TYPE_WORD;
+    $hide = $this->session->hide ? $this->session->hide : Term::HIDE_IMG;
+?>
 <!-- css files -->
 <link rel="stylesheet" href="/modules/term/css/list.css">
 
@@ -13,14 +17,14 @@
     <? include_once('./views/total/message.php'); ?>
 	
     <!-- term list -->
-    <? if ($this->get->type == Term::TYPE_WORD) include_once('words.php'); ?>
+    <? if ($type == Term::TYPE_WORD) include_once('words.php'); ?>
 	
 	<!-- menu -->
     <? include_once('menu.php'); ?>
 
     <!-- pagination -->
     <div class="pagination-wrp">
-       <?=$pagination->links?> 
+       <?= $pagination ? $pagination->links : ''?> 
     </div>
     
 </div>

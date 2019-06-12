@@ -20,7 +20,9 @@ class Controller_Term extends Controller_Base {
 
 	public function action_options()
 	{
-		debug($_GET);
+		$this->setSession('type', $this->get->type);
+		$this->setSession('hide', $this->get->hide);
+		return $this->redirect();
 	}
 	
 	public function action_index()

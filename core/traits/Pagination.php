@@ -33,7 +33,7 @@ trait Pagination {
 
 	public function getPagination()
 	{
-		$this->pagination->links = $this->createLinksPagination();
+		if ($this->pagination) $this->pagination->links = $this->createLinksPagination();
 		return $this->pagination;
 	}
 

@@ -18,7 +18,7 @@ class Controller_Main extends Controller_Base {
     {
         // if (!$this->session->id_user) return $this->redirect('main/login');
         // $user = new User($this->session->id_user);
-        $this->redirect('term/list?type='.Term::TYPE_WORD);
+        $this->redirect('term/list');
     }
 
     public function action_login()

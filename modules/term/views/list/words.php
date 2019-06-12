@@ -12,10 +12,10 @@
                 <td>
                     <input type="checkbox" name="term" id_term="<?=$term->id?>">
                 </td>
-                <td>
+                <td style="visibility:<?=($hide == Term::HIDE_WORD)?'hidden':'visible'?>">
                     <a href="/term?id_term=<?=$term->id?>"><?=$term->name?></a>
                 </td>
-				<td class="term-images-td">
+				<td style="visibility:<?=($hide == Term::HIDE_IMG)?'hidden':'visible'?>">
 					<? if ($term->images): ?>
 						<? foreach ($term->images as $image): ?>
 							<img src="/terms/<?=$image->file?>">&nbsp;&nbsp;
