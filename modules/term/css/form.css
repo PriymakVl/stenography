@@ -1,49 +1,7 @@
 /*form add*/
-#form-order-wrp h2, #form-order-position-wrp h2 {
-	text-align: center;
-}
 
-#form-order-symbol-wrp input{
-    width: 130px;
-}
-
-#form-order-type-wrp {
-    position: absolute;
-    top: 10px;
-    left: 340px;
-}
-
-#form-order-type-wrp select {
-    width: 140px;
-    height: 30px;
-}
-
-#form-order-date-wrp {
-    position: absolute;
-    top: 10px;
-    left: 610px;
-}
-
-#form-order-date-wrp input {
-    width: 140px;
-}
-
-#form-order-add-wrp input[type="submit"], #form-order-position-wrp input[type="submit"] {
-    margin-left: 290px;
-}
-
-#form-order-add-wrp input[type="button"], #form-order-position-wrp input[type="button"] {
-    margin-left: 130px;
-}
-
-#form-order-note-wrp textarea {
-	width: 915px;
-}
-
-
-
-#form-order-date-wrp #datepicker {
-    width: 75px;
+input[name="name"] {
+    width: 810px;
 }
 
 
