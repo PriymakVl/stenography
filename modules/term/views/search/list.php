@@ -3,32 +3,32 @@
         <th width="40">
             <input type="checkbox" disabled>
         </th>
-        <th width="120">Обозначение</th>
-        <th width="550">Содержание</th>
-		<th width="80">Дата вып.</th>
-		<th>Примечание</th>
+        <th width="120">Наименование</th>
+        <th>Обозначение</th>
     </tr>
-    <? if ($orders): ?>
-        <?foreach ($orders as $order): ?>
+    <? if ($terms): ?>
+        <?foreach ($terms as $term): ?>
             <tr>
-                <td class="<?=($this->session->id_order_active == $order->id)?'bg-green':''?>">
-                    <input type="checkbox" name="order" id_order="<?=$order->id?>">
+                <td>
+                    <input type="checkbox" name="term" >
                 </td>
                 <td>
-                    <a href="/order?id_order=<?=$order->id?>"><?=$order->symbol?></a>
+                    <a href="/term?id_term=<?=$term->id?>"><?=$term->name?></a>
                 </td>
-				<? if ($order->positions): ?>
-					<td class="order-positions-td"><?=$order->positionsTable?></td>
-				<? else: ?>
-					<td class="red">Нет позиций</td>
-				<? endif; ?>
-				<td><?=$order->date_exec ? date('d.m.y', $order->date_exec) : 'Нет';?></td>
-				<td><?=$order->note?></td>
+				<td>
+                    <? if ($term->images): ?>
+                    <? foreach ($term->images as $image): ?>
+                        <img src="/terms/<?=$image->file?>">&nbsp;&nbsp;
+                    <? endforeach; ?>
+                    <? else: ?>
+                        <span class="red">нет</span>
+                    <? endif; ?>            
+                </td>
             </tr>
         <? endforeach; ?>
     <? else: ?>
         <tr>
-            <td colspan="5" style="color: red;">Заказов нет</td>
+            <td colspan="5" style="color: red;">Слов и фраз нет</td>
         </tr>
     <? endif; ?>
 </table>
