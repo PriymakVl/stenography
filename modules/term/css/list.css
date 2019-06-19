@@ -34,7 +34,7 @@
 	height: 20px;
 }
 
-.term-images-td {
+.term-images {
 	text-align: left;
 }
 
@@ -44,6 +44,10 @@
 
 .list-words {
     margin-bottom: 20px;
+}
+
+.hidden {
+   display: none;
 }
 
 

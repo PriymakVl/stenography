@@ -12,13 +12,13 @@
                 <td>
                     <input type="checkbox" name="term" id_term="<?=$term->id?>">
                 </td>
-                <td style="visibility:<?=($hide == Term::HIDE_WORD)?'hidden':'visible'?>">
-                    <a href="/term?id_term=<?=$term->id?>"><?=$term->name?></a>
+                <td class="term-name">
+                    <a class="<?=($hide == Term::HIDE_WORD)?'hidden':''?>" href="/term?id_term=<?=$term->id?>"><?=$term->name?></a>
                 </td>
-				<td style="visibility:<?=($hide == Term::HIDE_IMG)?'hidden':'visible'?>">
+				<td class="term-images <?=($hide == Term::HIDE_IMG)?'hidden':''?>">
 					<? if ($term->images): ?>
 						<? foreach ($term->images as $image): ?>
-							<img src="/terms/<?=$image->file?>">&nbsp;&nbsp;
+							<img class="<?=($hide == Term::HIDE_WORD)?'hidden':''?>" src="/terms/<?=$image->file?>">&nbsp;&nbsp;
 						<? endforeach; ?>
 					<? else: ?>
 						<span class="red">нет</span>

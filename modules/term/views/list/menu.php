@@ -10,7 +10,7 @@
             <a href="#" id="show-images-all">Показать изображения</a>
         </li>
         <li>
-            <a href="#" id="show-term-all">Показать слова</a>
+            <a href="#" id="show-names-all">Показать слова</a>
         </li>
     </ul>
 </div>
