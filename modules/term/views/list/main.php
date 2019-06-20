@@ -18,6 +18,7 @@
 	
     <!-- term list -->
     <? if ($type == Term::TYPE_WORD) include_once('words.php'); ?>
+    <? if ($type == Term::TYPE_PHRASE) include_once('fhrase.php'); ?>
 	
 	<!-- menu -->
     <? include_once('menu.php'); ?>
