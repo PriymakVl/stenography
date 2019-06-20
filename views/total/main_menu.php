@@ -3,6 +3,9 @@
 		<li>
 			<a href="/">Главная</a>
 		</li>
+        <li>
+            <a href="/rule/list">Правила</a>
+        </li>
         <!--  -->
         <li class="drop">
             <a href="#">Упражнения</a>

@@ -14,13 +14,13 @@ class Rule extends RuleBase {
 	
 	public function addData()
 	{
-		$id_rule = $this->addDataModel();
+		$id_rule = $this->insertDataModel();
 		return new self ($id_rule);
 	}
 	
 	public function editData()
 	{
-		$this->editDataModel();
+		$this->updateDataModel();
 		return $this;
 	}
 	
