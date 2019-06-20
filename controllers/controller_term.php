@@ -12,8 +12,9 @@ class Controller_Term extends Controller_Base {
 	
 	public function action_list()
 	{
+		$show_qty = ($this->session->type == Term::TYPE_PHRASE) ? 1 : 4;
 		$obj = new Term;
-		$terms = $obj->getList(4);
+		$terms = $obj->getList($show_qty);
 		$pagination = $obj->getPagination();
 		$this->render('list/main', compact('pagination', 'terms'));
 	}

@@ -17,7 +17,7 @@
 		<td class="left">
 			<? if ($term->images): ?>
 				<? foreach ($term->images as $image): ?>
-					<img src="/terms/<?=$image->file?>">
+					<img height="50" src="/terms/<?=$image->file?>">
 				<? endforeach; ?>
 			<? else: ?>
 				<span class="red">Нет</span>

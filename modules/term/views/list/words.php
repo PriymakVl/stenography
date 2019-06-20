@@ -15,10 +15,10 @@
                 <td class="term-name">
                     <a class="<?=($hide == Term::HIDE_WORD)?'hidden':''?>" href="/term?id_term=<?=$term->id?>"><?=$term->name?></a>
                 </td>
-				<td class="term-images <?=($hide == Term::HIDE_IMG)?'hidden':''?>">
+				<td class="term-images">
 					<? if ($term->images): ?>
 						<? foreach ($term->images as $image): ?>
-							<img class="<?=($hide == Term::HIDE_WORD)?'hidden':''?>" src="/terms/<?=$image->file?>">&nbsp;&nbsp;
+							<img height="50" class="<?=($hide == Term::HIDE_IMG)?'hidden':''?>" src="/terms/<?=$image->file?>">&nbsp;&nbsp;
 						<? endforeach; ?>
 					<? else: ?>
 						<span class="red">нет</span>
