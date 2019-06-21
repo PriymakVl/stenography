@@ -2,7 +2,7 @@
 
 class RuleBase extends Model {
 	
-	
+	use RuleModel, RuleList;
 	
 	public function __construct($id = false)
     {

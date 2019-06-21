@@ -14,14 +14,13 @@ class Controller_Rule extends Controller_Base {
 	{
 		$obj = new Rule;
 		$rules = $obj->getList(2);
-		debug($rules);
 		$pagination = $obj->getPagination();
 		$this->render('list/main', compact('pagination', 'rules'));
 	}
 	
 	public function action_index()
 	{
-		$term = new Rule($this->get->id_rule);
+		$rule = new Rule($this->get->id_rule);
 		$this->render('index/main', compact('rule'));
 	}
 

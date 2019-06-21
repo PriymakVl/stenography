@@ -2,8 +2,6 @@
 
 class Rule extends RuleBase {
 	
-	use RuleModel, RuleList;
-
 	public $examples;
 	
 	public function getExamples()
