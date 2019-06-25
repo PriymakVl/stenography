@@ -2,38 +2,35 @@
     <tr>
         <th width="40">№</th>
         <th width="200">Наименование</th>
-        <th>Начертание</th>
+        <th>Значение</th>
     </tr>
-	<!-- name -->
+	<!-- number -->
 	<tr>
 		<td>1</td>
-		<td>Название</td>
-		<td class="left"><?=$term->name?></td>
+		<td>Номер</td>
+		<td class="left"><?=$rule->number?></td>
 	</tr>
-	<!-- images -->
+	<!-- text -->
 	<tr>
 		<td>2</td>
-		<td>Начертание</td>
+		<td>Текст</td>
 		<td class="left">
-			<? if ($term->images): ?>
-				<? foreach ($term->images as $image): ?>
-					<img height="50" src="/terms/<?=$image->file?>">
+			<?=$rule->text?>
+		</td>
+	</tr>
+	<!-- exemples -->
+	<tr>
+		<td>3</td>
+		<td>Примеры</td>
+		<td class="left">
+			<? if ($rule->examples): ?>
+				<? foreach ($rule->examples as $example): ?>
+					<span><?$example->name?></span>
+					<img height="50" src="/terms/<?=$exemple->file?>">
 				<? endforeach; ?>
 			<? else: ?>
 				<span class="red">Нет</span>
 			<? endif; ?>
 		</td>
-	</tr>
-	<!-- type -->
-	<tr>
-		<td>3</td>
-		<td>Тип</td>
-		<td><?=$term->typeString?></td>
-	</tr>
-	<!-- rules -->
-	<tr>
-		<td>4</td>
-		<td>Правила</td>
-		<td>Нет</td>
 	</tr>
 </table>

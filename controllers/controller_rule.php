@@ -31,18 +31,18 @@ class Controller_Rule extends Controller_Base {
 		$this->redirect('rule?id_rule='. $rule->id);
     }
 	
-	public function action_add_example()
+	public function action_add_examples()
 	{
-		if (!$this->post->save) return $this->render('add_example/main');
-		$rule = (new Rule)->setData($this->get->id_rule)->addExample()->setMessage('success', 'add_example');
+		if (!$this->post->save) return $this->render('add_examples/main');
+		$rule = (new Rule)->setData($this->get->id_rule)->addExamples()->setMessage('success', 'add_example');
 		$this->redirect('rule?id_rule='. $rule->id);
 	}
 	
 	public function action_edit()
     {
-		$term = new Rule($this->get->id_rule);
+		$rule = new Rule($this->get->id_rule);
 		if (!$this->post->save) return $this->render('edit/main', compact('rule'));
-		$term->editData()->setMessage('success', 'edit');
+		$rule->editData()->setMessage('success', 'edit');
 		$this->redirect('rule?id_rule='.$rule->id);
     }
 	

@@ -21,6 +21,13 @@ class Rule extends RuleBase {
 		$this->updateDataModel();
 		return $this;
 	}
+
+	public function addExemples()
+	{
+		$examples = explode(',', $this->post->examples);
+		if (!$examples) throw new Exception('Нет примеров');
+		debug($examples);
+	}
 	
 	
 
