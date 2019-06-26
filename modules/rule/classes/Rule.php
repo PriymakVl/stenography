@@ -22,10 +22,14 @@ class Rule extends RuleBase {
 		return $this;
 	}
 
-	public function addExemples()
+	public function addExamples()
 	{
 		$examples = explode(',', $this->post->examples);
 		if (!$examples) throw new Exception('Нет примеров');
+		foreach ($examples as $example) {
+			$term = (new Term)->getByNameModel(trim($example));
+			if ($term) (new RuleExample)->add($this->get->id_rule, $term->id);
+		}
 		debug($examples);
 	}
 	

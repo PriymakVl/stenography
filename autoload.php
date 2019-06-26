@@ -47,7 +47,7 @@ function autoload_module($class_name)
 function autoload_model($class_name)
 {
 	switch($class_name) {
-		case 'Action': return require './models/Action.php';
+		case 'RuleExample': return require './models/RuleExample.php';
 	}
 }
 

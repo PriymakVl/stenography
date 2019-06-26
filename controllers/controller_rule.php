@@ -33,9 +33,10 @@ class Controller_Rule extends Controller_Base {
 	
 	public function action_add_examples()
 	{
-		if (!$this->post->save) return $this->render('add_examples/main');
-		$rule = (new Rule)->setData($this->get->id_rule)->addExamples()->setMessage('success', 'add_example');
-		$this->redirect('rule?id_rule='. $rule->id);
+		$rule = (new Rule)->setData($this->get->id_rule);
+		if (!$this->post->save) return $this->render('add_examples/main', compact('rule'));
+		$rule->addExamples();
+		$this->setMessage('success', 'add_example')->redirect('rule?id_rule='. $rule->id);
 	}
 	
 	public function action_edit()
