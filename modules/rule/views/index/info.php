@@ -26,7 +26,12 @@
 			<? if ($rule->examples): ?>
 				<? foreach ($rule->examples as $example): ?>
 					<span><?$example->name?></span>
-					<img height="50" src="/terms/<?=$exemple->file?>">
+					<? if ($example->images): ?>
+						<? foreach ($example->images as $img): ?>
+							<img height="50" src="/terms/<?=$exemple->file?>">
+						<? endforeach; ?>
+						<br>
+					<? endif; ?>
 				<? endforeach; ?>
 			<? else: ?>
 				<span class="red">Нет</span>

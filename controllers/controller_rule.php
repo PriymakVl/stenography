@@ -20,7 +20,7 @@ class Controller_Rule extends Controller_Base {
 	
 	public function action_index()
 	{
-		$rule = new Rule($this->get->id_rule);
+		$rule = (new Rule)->setData($this->get->id_rule)->getExamples();
 		$this->render('index/main', compact('rule'));
 	}
 
