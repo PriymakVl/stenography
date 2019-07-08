@@ -33,7 +33,7 @@ class RuleExample extends Model {
 
     public function getByIdRule($id_rule)
     {
-        $sql = 'SELECT * FROM `rules_examples` WHERE `status` = :status AND `id_rule` = :id_rule ORDER BY `number`';
+        $sql = 'SELECT * FROM `rules_examples` WHERE `status` = :status AND `id_rule` = :id_rule';
         return self::perform($sql, ['status' => STATUS_ACTIVE, 'id_rule' => $id_rule])->fetchAll();
     }
 }

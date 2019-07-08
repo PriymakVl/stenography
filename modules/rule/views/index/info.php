@@ -1,4 +1,4 @@
-<table class="info-term" width="940">
+<table class="info-rule" width="940">
     <tr>
         <th width="40">№</th>
         <th width="200">Наименование</th>
@@ -25,12 +25,12 @@
 		<td class="left">
 			<? if ($rule->examples): ?>
 				<? foreach ($rule->examples as $example): ?>
-					<span><?$example->name?></span>
+					<span><?=$example->name?></span>&nbsp; &nbsp; 
 					<? if ($example->images): ?>
 						<? foreach ($example->images as $img): ?>
-							<img height="50" src="/terms/<?=$exemple->file?>">
+							<img height="50" src="/terms/<?=$img->file?>">
 						<? endforeach; ?>
-						<br>
+						<hr>
 					<? endif; ?>
 				<? endforeach; ?>
 			<? else: ?>
