@@ -15,7 +15,7 @@
     height: 28px;
 }
 
-.list-words td {
+.list-words td, .list-phrase td {
     height: 60px;
 }
 
@@ -46,7 +46,7 @@
     text-align: center;
 }
 
-.list-words {
+.list-words, .list-phrase {
     margin-bottom: 20px;
 }
 

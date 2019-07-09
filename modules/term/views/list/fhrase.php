@@ -1,7 +1,7 @@
 <?php
     $number = 1;
 ?>
-<table class="list-fhrase" width="940">
+<table class="list-phrase" width="940">
     <tr>
         <th width="40">№</th>
         <th>Фразы</th>
@@ -12,14 +12,14 @@
                 <td rowspan="2">
                     <?=$number?>
                 </td>
-               <td class="left">
-                    <a href="/term?id_term=<?=$term->id?>"><?=$term->name?></a>
+               <td class="term-name left">
+                    <a href="/term?id_term=<?=$term->id?>" class="<?=($hide == Term::HIDE_WORD)?'hidden':''?>"><?=$term->name?></a>
                 </td>
             </tr>
             <tr>
-               <td class="left">
+               <td class="term-images" style="text-align: left;">
                     <? if ($term->images): ?>
-                        <img src="/terms/<?=$term->images[0]->file?>">
+                        <img src="/terms/<?=$term->images[0]->file?>" height="50" class="<?=($hide == Term::HIDE_IMG)?'hidden':''?>">
                     <? else: ?>
                         <span class="red">Нет</span>
                     <? endif; ?>
