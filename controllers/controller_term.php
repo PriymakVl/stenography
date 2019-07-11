@@ -19,9 +19,15 @@ class Controller_Term extends Controller_Base {
 		$this->render('list/main', compact('pagination', 'terms'));
 	}
 
-	public function action_options()
+	//select type
+	public function action_select()
 	{
 		$this->setSession('type', $this->get->type);
+		$this->redirect('term/list');
+	}
+
+	public function action_options()
+	{
 		$this->setSession('hide', $this->get->hide);
 		return $this->redirect();
 	}

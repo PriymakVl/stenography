@@ -13,7 +13,7 @@ class Controller_Rule extends Controller_Base {
 	public function action_list()
 	{
 		$obj = new Rule;
-		$rules = $obj->getList(16);
+		$rules = $obj->getList(1);
 		$pagination = $obj->getPagination();
 		$this->render('list/main', compact('pagination', 'rules'));
 	}
