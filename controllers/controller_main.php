@@ -5,7 +5,7 @@ class Controller_Main extends Controller_Base {
     public function __construct()
     {
         parent::__construct();
-        $this->view->pathLayout = './views/layouts/authorization.php';
+        $this->view->pathLayout = './views/layouts/default.php';
     }
 
 	public function action_404()
@@ -16,13 +16,19 @@ class Controller_Main extends Controller_Base {
 
     public function action_index()
     {
-        // if (!$this->session->id_user) return $this->redirect('main/login');
-        // $user = new User($this->session->id_user);
-        $this->redirect('term/list');
+       return $this->render('main/index');
+    }
+
+    public function action_admin()
+    {
+        if (!$this->session->id_user) return $this->redirect('main/login');
+        $user = new User($this->session->id_user);
+        $this->redirect('main/index');
     }
 
     public function action_login()
     {
+        $this->view->pathLayout = './views/layouts/authorization.php';
 		if (!$this->post->save) return $this->render('main/login');
         $user = (new User)->login();		
         if (!$user) return $this->redirect('main/login?login_error='.$this->post->login);

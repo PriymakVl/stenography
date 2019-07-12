@@ -29,7 +29,7 @@ class Controller_Term extends Controller_Base {
 	public function action_options()
 	{
 		$this->setSession('hide', $this->get->hide);
-		return $this->redirect();
+		return $this->redirect('term/list');
 	}
 	
 	public function action_index()

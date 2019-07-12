@@ -27,6 +27,17 @@ class Term extends TermBase {
 		$items = $this->searchByNameModel();
 		if ($items) return ObjectHelper::factory($items, 'Term', ['setData', 'getImages']);
 	}
+
+	public static function convertType($type)
+	{
+		switch($type) {
+			case self::TYPE_LETTER: return 'Буктвы';
+			case self::TYPE_PART_WORD: return 'Слоги';
+			case self::TYPE_WORD: return 'Слова';
+			case self::TYPE_PHRASE: return 'Предложения';
+			default: return 'Неизвестно';
+		}
+	}
 	
 
 }
