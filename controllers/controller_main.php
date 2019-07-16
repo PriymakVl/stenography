@@ -36,7 +36,13 @@ class Controller_Main extends Controller_Base {
 
     public function action_logout()
     {
-        $this->deleteSession('id_user')->redirect('main/login');
+        $this->deleteSession('id_user')->redirect('main/index');
+    }
+
+    public function action_exercise()
+    {
+        $this->view->title = 'Упражнения';
+        return $this->render('main/exercise');
     }
 
 }

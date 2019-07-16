@@ -6,7 +6,7 @@
         <li>
             <a href="/rule/list">Правила</a>
         </li>
-        <!--  -->
+        <!-- Тренажеры -->
         <li class="drop">
             <a href="#">Тренажеры</a>
             <div class="dropdownContain">
@@ -29,5 +29,13 @@
                 </div>
             </div>
         </li>
+        <li>
+            <a href="/main/exercise">Упражнения</a>
+        </li>
+        <? if ($this->session->id_user): ?>
+             <li>
+                <a href="/main/logout">Выйти</a>
+            </li>
+        <? endif; ?>
     </ul>
 </nav>

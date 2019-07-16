@@ -1,7 +1,9 @@
 <div class="menu-outside-wrp">
     <ul
-		<li>
-            <a href="/rule/add">Добавить правило</a>
-        </li>
+    	<? if ($this->session->id_user): ?>
+			<li>
+	            <a href="/rule/add">Добавить правило</a>
+	        </li>
+        <? endif; ?>
     </ul>
 </div>

@@ -7,10 +7,10 @@
         <?foreach ($rules as $rule): ?>
             <tr>
                 <td>
-                    <a href="/rule?id_rule=<?=$rule->id?>"><?=$rule->number?></a>
+                    <?=$rule->number?>
                 </td>
 				<td class="left">
-					<?=$rule->text?>
+					<a href="/rule?id_rule=<?=$rule->id?>"><?=$rule->text?></a>
 				</td>
             </tr>
         <? endforeach; ?>
