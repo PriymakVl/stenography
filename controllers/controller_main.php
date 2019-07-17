@@ -39,10 +39,4 @@ class Controller_Main extends Controller_Base {
         $this->deleteSession('id_user')->redirect('main/index');
     }
 
-    public function action_exercise()
-    {
-        $this->view->title = 'Упражнения';
-        return $this->render('main/exercise');
-    }
-
 }

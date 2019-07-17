@@ -30,7 +30,7 @@
             </div>
         </li>
         <li>
-            <a href="/main/exercise">Упражнения</a>
+            <a href="/exercise/list">Упражнения</a>
         </li>
         <? if ($this->session->id_user): ?>
              <li>

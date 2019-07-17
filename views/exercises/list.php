@@ -11,9 +11,13 @@
 			<a href="../index.htm" style="text-decoration: none">- Введение<br>
 			- Советы учащимся</a><br>
 			<br>
-			<b><font color="#2E7344">
-			<a href="harakteristika_stenograficheskogo_pis'ma.htm" style="text-decoration: none">
-			<font color="#2E7344">Глава I. Алфавит и слитные знаки</font></a></font></b><a href="harakteristika_stenograficheskogo_pis'ma.htm" style="text-decoration: none"><br>
+			<b>
+			<font color="#2E7344">
+				<a href="/exercise/file?name=harakteristika_stenograficheskogo_pis'ma" style="text-decoration: none">
+					<font color="#2E7344">Глава I. Алфавит и слитные знаки</font>
+				</a>
+			</font>
+			</b><a href="/exercise/file?name=harakteristika_stenograficheskogo_pis'ma" style="text-decoration: none"><br>
 			- §1. Характеристика стенографического письма</a><br>
 			<a href="alfavit_i_soedinenie_znakov.htm" style="text-decoration: none">
 			- §2. Алфавит и соединения знаков. Гласные А—Я в середине слова. 
