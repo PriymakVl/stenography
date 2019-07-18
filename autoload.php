@@ -48,6 +48,7 @@ function autoload_model($class_name)
 	switch($class_name) {
 		case 'RuleExample': return require './models/RuleExample.php';
 		case 'User': return require './models/User.php';
+		case 'Counter': return require './models/Counter.php';
 	}
 }
 

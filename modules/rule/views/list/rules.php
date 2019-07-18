@@ -1,6 +1,6 @@
 <table class="list-rules" width="940">
     <tr>
-        <th width="40">Номер</th>
+        <th width="40">№</th>
         <th>Текст</th>
     </tr>
     <? if ($rules): ?>

@@ -16,7 +16,9 @@ class Controller_Main extends Controller_Base {
 
     public function action_index()
     {
-       return $this->render('main/index');
+        (new Counter)->insertData('main');
+        //$visits = (new Counter)->getVisits('main');
+        return $this->render('main/index');
     }
 
     public function action_admin()

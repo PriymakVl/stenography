@@ -8,17 +8,19 @@
         </li>
         <!-- Тренажеры -->
         <li class="drop">
-            <a href="#">Тренажеры</a>
+            <a href="#">Тренажер</a>
             <div class="dropdownContain">
                 <div class="dropOut">
                     <div class="triangle"></div>
                     <ul>
+                        <!--
                         <li>
-                            <a href="/term/select?type=<?=Term::TYPE_LETTER?>">Буквы</a>
+                            <a href="#">Буквы</a>
                         </li>
                         <li>
-                            <a href="/term/select?type=<?=Term::TYPE_PART_WORD?>">Слоги</a>
+                            <a href="#">Слоги</a>
                         </li>
+                        -->
                         <li>
                             <a href="/term/select?type=<?=Term::TYPE_WORD?>">Слова</a>
                         </li>
@@ -29,13 +31,13 @@
                 </div>
             </div>
         </li>
+        <? if ($this->session->id_user): ?>
         <li>
             <a href="/exercise/list">Упражнения</a>
         </li>
-        <? if ($this->session->id_user): ?>
-             <li>
-                <a href="/main/logout">Выйти</a>
-            </li>
+        <li>
+            <a href="/main/logout">Выйти</a>
+        </li>
         <? endif; ?>
     </ul>
 </nav>
