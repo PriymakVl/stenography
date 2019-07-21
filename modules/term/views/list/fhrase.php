@@ -9,7 +9,7 @@
     <? if ($terms): ?>
         <?foreach ($terms as $term): ?>
             <tr>
-                <td rowspan="2">
+                <td rowspan="3">
                     <?=$number?>
                 </td>
                <td class="term-name left">

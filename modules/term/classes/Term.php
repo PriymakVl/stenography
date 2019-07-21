@@ -9,6 +9,12 @@ class Term extends TermBase {
 		$this->images = (new Image)->getForTerm($this->id);
 		return $this;
 	}
+
+	public function getSound()
+	{
+		$this->sound = (new Sound)->getForTerm($this->id);
+		return $this;
+	}
 	
 	public function addData()
 	{

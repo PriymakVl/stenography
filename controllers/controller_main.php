@@ -17,7 +17,6 @@ class Controller_Main extends Controller_Base {
     public function action_index()
     {
         $visits = (new Visit)->count('main');
-        debug($visits);
         return $this->render('main/index', compact('visits'));
     }
 

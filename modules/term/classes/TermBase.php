@@ -11,6 +11,7 @@ class TermBase extends Model {
     const HIDE_WORD = 2;
 	
 	public $images;
+	public $sound;
 	public $typeString;
 	
 	public function __construct($id = false)

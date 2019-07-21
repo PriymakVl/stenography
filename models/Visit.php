@@ -17,8 +17,8 @@ class Visit extends Model {
     public function count($type)
     {
         $this->insertData($type);
-        $sql = 'SELECT (*) FROM `visits` WHERE `type` = :type';
-        return self::perform($sql, [':type' => $type])->fetch();
+        $sql = 'SELECT COUNT(*) FROM `visits` WHERE `type` = :type';
+        return self::perform($sql, ['type' => $type])->fetchColumn();
     }
 
             

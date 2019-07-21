@@ -34,7 +34,7 @@ class Controller_Term extends Controller_Base {
 	
 	public function action_index()
 	{
-		$term = Term::build($this->get->id_term, ['getImages', 'setTypeString']);
+		$term = Term::build($this->get->id_term, ['getImages', 'setTypeString', 'getSound']);
 		$this->render('index/main', compact('term'));
 	}
 

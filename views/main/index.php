@@ -6,3 +6,12 @@
 	<li>Планирую дописать упражнения и форум</li>
 	<li>Контент буду добавлять по мере изучения</li>
 </ul>
+<br>
+<p>
+	Используется материал с сайта <a href="http://shorthand.ru/index.htm" target="_blank">shorthand.ru</a>
+</p>
+<br>
+<br>
+<? if ($this->session->id_user): ?>
+	<p>Количество посещений: <span><?=$visits?></span></
+<? endif; ?>

@@ -9,5 +9,8 @@
 		<li>
             <a href="/image/add?id_term=<?=$term->id?>">Добавить изобр.</a>
         </li>
+        <li>
+            <a href="/sound/add?id_term=<?=$term->id?>">Добавить аудио</a>
+        </li>
     </ul>
 </div>

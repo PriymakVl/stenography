@@ -7,6 +7,9 @@
     		<li>
                 <a href="/term/add_list?type=<?=Term::TYPE_WORD?>">Добавить слова</a>
             </li>
+            <li>
+                <a href="/sound/add_list">Добавить аудио</a>
+            </li>
         <? endif; ?>
         <? if ($hide == Term::HIDE_IMG): ?>
     		<li>

@@ -6,6 +6,12 @@
     <!-- message -->
     <? include_once('./views/total/message.php'); ?>
 
+    <div style="text-align: center; margin-bottom: 15px;">
+    	<a href="/term?id_term=<?=($term->id - 1)?>" class="preview">Предыдущая</a>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    	<a href="/term?id_term=<?=($term->id + 1)?>" class="preview">Следующая</a>
+    </div>
+
 	<!-- info term -->
 	<? include_once('info.php'); ?>
 
