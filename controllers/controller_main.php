@@ -40,4 +40,9 @@ class Controller_Main extends Controller_Base {
         $this->deleteSession('id_user')->redirect('main/index');
     }
 
+    public function action_search()
+    {
+        return $this->render('main/search');
+    }
+
 }

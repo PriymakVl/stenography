@@ -36,6 +36,9 @@
             <a href="/exercise/list">Упражнения</a>
         </li>
         <li>
+            <a href="/main/search">Поиск</a>
+        </li>
+        <li>
             <a href="/main/logout">Выйти</a>
         </li>
         <? endif; ?>

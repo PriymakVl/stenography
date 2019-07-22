@@ -4,6 +4,7 @@
 ?>
 <!-- css files -->
 <link rel="stylesheet" href="/modules/term/css/list.css">
+<link rel="stylesheet" href="/modules/term/css/search.css">
 
 <div id="content">
 
