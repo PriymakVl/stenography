@@ -5,6 +5,10 @@
     left: 657px;
 }
 
+.search-page #form-term-search-wrp {
+    top: -10px;
+}
+
 #form-term-search-wrp input[type="submit"] {
     padding: 4px 10px 4px 10px;
 	height: 30px;
@@ -29,4 +33,8 @@
 
 .hidden {
    display: none;
+}
+
+#content > h3 {
+    margin-top: 5px;
 }

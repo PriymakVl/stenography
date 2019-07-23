@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/modules/order/css/list.css">
 <link rel="stylesheet" href="/modules/term/css/search.css">
 
-<div id="content">
+<div id="content" class="search-page">
 	
     <!-- message -->
     <? include_once('./views/total/message.php'); ?>

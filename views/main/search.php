@@ -1,6 +1,3 @@
-<!-- css -->
-<link rel="stylesheet" href="/modules/term/css/search.css">
-
 <div id="form-term-search-wrp">
     <form action="/term/search" method="post">
         <input type="text" name="name" placeholder="Введите текст">

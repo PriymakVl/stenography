@@ -30,18 +30,20 @@
 		<td>Тип</td>
 		<td><?=$term->typeString?></td>
 	</tr>
-	<!-- sound -->
-	<tr>
-		<td></td>
-		<td>Озвучка</td>
-		<td class="left">
-			<? if ($term->sound): ?>
-					<audio controls height="50" src="/web/sounds/<?=$term->sound->file?>">
-			<? else: ?>
-				<span class="red">Нет</span>
-			<? endif; ?>
-		</td>
-	</tr>
+	<? if ($this->session->id_user): ?>
+		<!-- sound -->
+		<tr>
+			<td></td>
+			<td>Озвучка</td>
+			<td class="left">
+				<? if ($term->sound): ?>
+						<audio controls height="50" src="/web/sounds/<?=$term->sound->file?>">
+				<? else: ?>
+					<span class="red">Нет</span>
+				<? endif; ?>
+			</td>
+		</tr>
+	<? endif; ?>
 	<!-- rules -->
 	<tr>
 		<td>4</td>
