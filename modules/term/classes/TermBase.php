@@ -7,6 +7,7 @@ class TermBase extends Model {
 	const TYPE_PART_WORD = 2;
 	const TYPE_WORD = 3;
     const TYPE_PHRASE = 4; 
+    
     const HIDE_IMG = 1;
     const HIDE_WORD = 2;
 	

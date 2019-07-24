@@ -1,0 +1,9 @@
+#form-term-search-wrp input[type="submit"] {
+    padding: 4px 10px 4px 10px;
+	height: 30px;
+}
+
+#form-term-search-wrp input[type="text"] {
+    width: 505px;
+	height: 20px;
+}

@@ -17,7 +17,7 @@ trait Param {
 	
 	public static function getParamsAsArray()
     {
-        $params = array_merge($_REQUEST, $_SESSION);
+        $params = array_merge($_REQUEST);
 		$params['status'] = STATUS_ACTIVE;
 		return $params;
     }
