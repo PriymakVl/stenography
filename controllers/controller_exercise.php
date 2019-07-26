@@ -11,6 +11,8 @@ class Controller_Exercise extends Controller_Base {
     public function action_list()
     {
         $this->view->title = 'Упражнения';
+        $exercises = (new Exercise)->getAll();
+        debug($exercises);
         return $this->render('exercises/list');
     }
 

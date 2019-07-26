@@ -1,10 +1,10 @@
 <table class="list-rules" width="940">
     <tr>
         <th width="40">№</th>
-        <th>Текст</th>
+        <th>Название</th>
     </tr>
-    <? if ($rules): ?>
-        <?foreach ($rules as $rule): ?>
+    <? if ($exercises): ?>
+        <?foreach ($exercises as $rule): ?>
             <tr>
                 <td>
                     <?=$rule->number?>

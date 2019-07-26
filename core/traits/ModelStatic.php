@@ -15,7 +15,7 @@ trait ModelStatic {
         return $stmt;
     }
 
-    public static function getAll($table_name)
+    public static function selectAll($table_name)
     {
         $sql = 'SELECT * FROM `'.$table_name.'` WHERE `status`= :status';
 		$params = ['status' => STATUS_ACTIVE];

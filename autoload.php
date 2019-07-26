@@ -38,6 +38,7 @@ function autoload_module($class_name)
 	else if (strpos($class_name, 'Image') !== false) $module_name = 'image';
 	else if (strpos($class_name, 'Rule') !== false) $module_name = 'rule';
 	else if (strpos($class_name, 'Sound') !== false) $module_name = 'sound';
+	else if (strpos($class_name, 'Exercise') !== false) $module_name = 'exercise';
 	if (!$module_name) return;
 	if (file_exists('./modules/'.$module_name.'/classes/'.$class_name.'.php')) require './modules/'.$module_name.'/classes/'.$class_name.'.php';
 	else if (file_exists('./modules/'.$module_name.'/traits/'.$class_name.'.php')) require './modules/'.$module_name.'/traits/'.$class_name.'.php';
