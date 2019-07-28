@@ -34,12 +34,12 @@ class Controller_Term extends Controller_Base {
 	
 	public function action_index()
 	{
-        $text = urlencode(iconv("CP1251", "UTF-8", 'Где ваше пальто?'));
-        $link = "http://translate.google.com/translate_tts?tl=RU&ie=UTF-8&q=" . $text;
-        $mp3data = file_get_contents($link);
-        $file = time() . ".mp3";
-        $sound = file_put_contents($file, $mp3data);
-        // debug($sound);
+		//create sount file
+        // $text = urlencode(iconv("CP1251", "UTF-8", 'Где ваше пальто?'));
+        // $link = "http://translate.google.com/translate_tts?tl=RU&ie=UTF-8&q=" . $text;
+        // $mp3data = file_get_contents($link);
+        // $file = time() . ".mp3";
+        // $sound = file_put_contents($file, $mp3data);
 		$term = Term::build($this->get->id_term, ['getImages', 'setTypeString', 'getSound']);
 		$this->render('index/main', compact('term', 'sound'));
 	}

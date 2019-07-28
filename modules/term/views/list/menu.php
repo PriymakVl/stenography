@@ -20,5 +20,6 @@
                 <a href="#" id="show-names-all">Показать слова</a>
             </li>  
         <? endif; ?> 
+        <li><a href="#" id="pass_page">Перейти на страницу...</a></li>
     </ul>
 </div>
