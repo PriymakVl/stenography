@@ -26,12 +26,22 @@ class Exercise extends ExerciseBase {
 
 	public function getContent()
 	{
-		$content = (new ExerciseContent)->selectByIdExercise($this->id);
-		if (!$content) return;
-		$this->rules = $this->selectProperty($content, 'type', 'rule');
-		$this->words = $this->selectProperty($content, 'type', 'word');
-		$this->phrases = $this->selectProperty($content, 'type', 'phrase');
+		// $content = (new ExerciseContent)->selectByIdExercise($this->id);
+		// if (!$content) return;
+		// $this->rules = $this->selectProperty($content, 'type', 'rule');
+		// $this->words = $this->selectProperty($content, 'type', 'word');
+		// $this->phrases = $this->selectProperty($content, 'type', 'phrase');
 		return $this;
+	}
+
+	public function getAll()
+	{
+		$items = self::selectAll('exercises');
+		if (!$items) return;
+		foreach ($items as $data) {
+			$result[] = (new self)->setData($data)->getContent();
+		}
+	  	return $result;
 	}
 	
 	

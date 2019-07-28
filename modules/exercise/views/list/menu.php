@@ -2,7 +2,7 @@
     <ul
     	<? if ($this->session->id_user): ?>
 			<li>
-	            <a href="/rule/add">Добавить правило</a>
+	            <a href="/exercise/add">Добавить упражнение</a>
 	        </li>
         <? endif; ?>
     </ul>
