@@ -34,5 +34,6 @@
 <!-- js files -->
 <script src="/modules/term/js/show_term.js"></script>
 <script src="/modules/term/js/set_options.js"></script>
+<script src="/modules/term/js/pass_page.js"></script>
 
 
