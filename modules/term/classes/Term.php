@@ -34,6 +34,15 @@ class Term extends TermBase {
 		if ($items) return ObjectHelper::factory($items, 'Term', ['setData', 'getImages']);
 	}
 
+	public function getSounds($terms)
+	{
+		foreach ($terms as $term) {
+			$term->getSound();
+			if ($term->sound->file) $sounds[] = $term->sound->file;
+		}
+		return implode(',', $sounds);
+	}
+
 }
 
 

@@ -20,6 +20,6 @@ trait SoundList {
 	{
 		$id_sound = (new self)->addDataModel($id_term);
 		(new self)->setData($id_sound)->editFileModel($id_sound.'.'.$extension);
-		rename('./web/temp/'.$file, './terms/'.$id_sound.'.'.$extension);
+		rename('./web/temp/'.$file, './web/sounds/'.$id_sound.'.'.$extension);
 	}
 }

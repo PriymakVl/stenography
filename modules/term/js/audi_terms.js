@@ -24,4 +24,10 @@ var sndLetItSnow = new Audio("sounds/1mp.mp3");
 
   }
 
-  setInterval(playSound, 5000);
+
+
+$(document).ready(function() {
+  $('#play-sounds').click(function() {
+    setInterval(playSound, 5000);
+  });
+});
