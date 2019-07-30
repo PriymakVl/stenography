@@ -1,8 +1,4 @@
-var sndLetItSnow = new Audio("sounds/1mp.mp3");
-	var sndSanta = new Audio("sounds/3mp.mp3");
-
-  var playlist = [sndLetItSnow, sndSanta];
-
+  var playlist = [];
   var current = null;
   var idx = 0;
 
@@ -28,6 +24,12 @@ var sndLetItSnow = new Audio("sounds/1mp.mp3");
 
 $(document).ready(function() {
   $('#play-sounds').click(function() {
+    var sounds_arr = sounds.dataset.list.split(',');
+    for (i = 0; i < sounds_arr.length; i++) {
+      playlist[i] = new Audio('/web/sounds/' + sounds_arr[i]);
+    }
+
+    //console.log(playlist);
     setInterval(playSound, 5000);
   });
 });

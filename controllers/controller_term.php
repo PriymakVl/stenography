@@ -12,7 +12,7 @@ class Controller_Term extends Controller_Base {
 	
 	public function action_list()
 	{
-		$show_qty = ($this->session->type == Term::TYPE_PHRASE) ? 1 : 4;
+		$show_qty = ($this->session->type == Term::TYPE_PHRASE) ? 1 : 10;
 		$obj = new Term;
 		$terms = $obj->getList($show_qty);
 		$sounds = $obj->getSounds($terms);

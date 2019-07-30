@@ -21,5 +21,6 @@
             </li>  
         <? endif; ?> 
         <li><a href="#" id="pass_page">Перейти на страницу...</a></li>
+        <li><a href="#" id="play-sounds">Озвучить слова</a></li>
     </ul>
 </div>

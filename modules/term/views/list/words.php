@@ -33,4 +33,4 @@
     <? endif; ?>
 </table>
 <!-- sounds -->
-<span id="sounds" data="<?=$sounds?>"></span>
+<span id="sounds" data-list="<?=$sounds?>"></span>
