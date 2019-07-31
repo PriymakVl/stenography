@@ -32,12 +32,17 @@ class Sound extends Model {
 	{
 		$file = $this->saveFile();
 		if (!$file) throw new Exception('add_error'); 
-		$id_sound = $file ? $this->addDataModel($this->params->id_term) : false;
-		if (!$id_sound) throw new Exception('add_error');
-		$sound = self::build($id_sound);
+		$sound = $this->getForTerm($this->params->id_term);
+		if (!$sound) {
+			$id_sound = $this->addDataModel($this->params->id_term);
+			if (!$id_sound) throw new Exception('add_error');
+			$sound = self::build($id_sound);
+		}
 		$sound->editFileModel($file);
 		return $sound;
 	}
+
+	
 	
 
 }
