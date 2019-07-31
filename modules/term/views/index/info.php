@@ -37,7 +37,7 @@
 			<td>Озвучка</td>
 			<td class="left">
 				<? if ($term->sound): ?>
-						<audio controls height="50" src="/web/sounds/<?=$term->sound->file?>">
+						<audio controls height="50" src="/web/sounds/<?=$term->sound->file?>"></audio>
 				<? else: ?>
 					<span class="red">Нет</span>
 				<? endif; ?>
