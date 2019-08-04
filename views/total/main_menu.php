@@ -4,7 +4,7 @@
 			<a href="/">Главная</a>
 		</li>
         <li>
-            <a href="/rule/list">Правила</a>
+            <a href="/rule/category">Правила</a>
         </li>
         <!-- Тренажеры -->
         <li class="drop">
@@ -13,19 +13,35 @@
                 <div class="dropOut">
                     <div class="triangle"></div>
                     <ul>
-                        <!--
                         <li>
-                            <a href="#">Буквы</a>
+                            <a href="/term/select?type=<?=Term::TYPE_LETTER?>">Буквы</a>
                         </li>
                         <li>
-                            <a href="#">Слоги</a>
+                            <a href="/term/select?type=<?=Term::TYPE_PART_WORD?>">Часть слова</a>
                         </li>
-                        -->
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_PREFIX_WORD?>">Приставки</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_ROOT_WORD?>">Корни слова</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_END_WORD?>">Окончания</a>
+                        </li>
                         <li>
                             <a href="/term/select?type=<?=Term::TYPE_WORD?>">Слова</a>
                         </li>
                         <li>
-                            <a href="/term/select?type=<?=Term::TYPE_PHRASE?>">Предложения</a>
+                            <a href="/term/select?type=<?=Term::TYPE_SHORT_WORD?>">Короткие слова</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_REPEAT_WORD?>">Повтор. слова</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_PHRASE?>">Фразеограммы</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_SENTENSE?>">Предложения</a>
                         </li>
                     </ul>
                 </div>

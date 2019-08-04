@@ -3,7 +3,7 @@
         <th width="40">
             <input type="checkbox" disabled>
         </th>
-        <th width="200">Наименование</th>
+        <th width="350">Наименование</th>
         <th>Изображения</th>
     </tr>
     <? if ($terms): ?>
@@ -18,7 +18,7 @@
 				<td class="term-images">
 					<? if ($term->images): ?>
 						<? foreach ($term->images as $image): ?>
-							<img height="50" class="<?=($hide == Term::HIDE_IMG)?'hidden':''?>" src="/terms/<?=$image->file?>">&nbsp;&nbsp;
+							<img height="50" class="<?=($hide == Term::HIDE_IMG && !$this->get->delay)?'hidden':''?>" src="/terms/<?=$image->file?>">&nbsp;&nbsp;
 						<? endforeach; ?>
 					<? else: ?>
 						<span class="red">нет</span>

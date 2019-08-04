@@ -106,6 +106,10 @@ input[type="text"] {
     background: green;
 }
 
+.hide {
+    display: none;
+}
+
 
 
 

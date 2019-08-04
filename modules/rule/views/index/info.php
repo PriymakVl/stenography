@@ -10,9 +10,15 @@
 		<td>Номер</td>
 		<td class="left"><?=$rule->number?></td>
 	</tr>
-	<!-- text -->
+	<!-- number -->
 	<tr>
 		<td>2</td>
+		<td>Глава</td>
+		<td class="left"><?=$rule->category->name?></td>
+	</tr>
+	<!-- text -->
+	<tr>
+		<td>3</td>
 		<td>Текст</td>
 		<td class="left">
 			<?=$rule->text?>
@@ -20,7 +26,7 @@
 	</tr>
 	<!-- exemples -->
 	<tr>
-		<td>3</td>
+		<td>4</td>
 		<td>Примеры</td>
 		<td class="left">
 			<? if ($rule->examples): ?>

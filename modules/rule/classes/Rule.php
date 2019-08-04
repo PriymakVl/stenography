@@ -3,6 +3,7 @@
 class Rule extends RuleBase {
 	
 	public $examples;
+	public $category;
 	
 	public function addData()
 	{
@@ -29,6 +30,12 @@ class Rule extends RuleBase {
 	public function getExamples()
 	{
 		$this->examples = (new RuleExample)->getForRule($this->id);
+		return $this;
+	}
+
+	public function getCategory()
+	{
+		$this->category = (new RuleCategory)->getData($this->id_cat);
 		return $this;
 	}
 	

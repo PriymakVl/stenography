@@ -12,9 +12,17 @@
 			<label>Тип:</label>
 			<select name="type">
 				 <option value="<?=Term::TYPE_LETTER?>">Буква</option>
-				<option value="<?=Term::TYPE_PART_WORD?>">Слог</option>
-				<option value="<?=Term::TYPE_WORD?>" selected>Слово</option>
-				<option value="<?=Term::TYPE_PHRASE?>">Предложение</option>
+				<option value="<?=Term::TYPE_PART_WORD?>">Часть слова</option>
+				<option value="<?=Term::TYPE_PREFIX_WORD?>">Приставка или предлог</option>
+				<option value="<?=Term::TYPE_ROOT_WORD?>" >Корень слова</option>
+				<option value="<?=Term::TYPE_END_WORD?>">Окончание</option>
+				<option value="<?=Term::TYPE_WORD?>">Слово</option>
+				<option value="<?=Term::TYPE_SHORT_WORD?>">Короткое слово</option>
+				<option value="<?=Term::TYPE_REPEAT_WORD?>">Повторяющиеся слова</option>
+				<option value="<?=Term::TYPE_PHRASE?>">Фразеограммы</option>
+				<option value="<?=Term::TYPE_SENTENSE?>">Предложение</option>
+				<option value="<?=Term::TYPE_NUMBER?>">Число</option>
+				<option value="<?=Term::TYPE_NAME?>">Собственное имя</option>
 			</select>
         </div>
 

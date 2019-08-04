@@ -8,6 +8,16 @@
 			<input type="text" name="number">
         </div>
 
+        <!-- category-->
+        <div class="form-box">
+            <label>Категория:</label>
+            <select name="id_cat" >
+                <? foreach ($cats as $cat): ?>
+                    <option value="<?=$cat->id?>"><?=$cat->name?></option>
+                <? endforeach; ?>
+            </select>
+        </div>
+
 		<!-- text -->
         <div class="form-box">
 			<label>Текст правила:</label>

@@ -1,5 +1,8 @@
 <div class="menu-outside-wrp">
     <ul>
+        <li>
+            <a href="/term/add">Добавить термин</a>
+        </li>
 		<li>
             <a href="/term/edit?id_term=<?=$term->id?>">Редакт-ть термин</a>
         </li>

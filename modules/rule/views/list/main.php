@@ -6,6 +6,7 @@
     <!-- message -->
     <? include_once('./views/total/message.php'); ?>
 	
+    <h1>Правила: <span class="green"><?=$cat->name?></span></h1>
     <!-- term list -->
     <? include_once('rules.php'); ?>
 	

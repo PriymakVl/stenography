@@ -21,5 +21,5 @@
 </div>
 
 <!-- js files -->
-<script src="/modules/term/js/delete_rule.js"></script>
+<!-- <script src="/modules/term/js/delete_rule.js"></script> -->
 

@@ -39,6 +39,7 @@ class Term extends TermBase {
 		foreach ($terms as $term) {
 			$term->getSound();
 			if ($term->sound) $sounds[] = $term->sound->file;
+			else $sounds[] = '0.mp3';
 		}
 		return (isset($sounds)) ? implode(',', $sounds) : null;
 	}

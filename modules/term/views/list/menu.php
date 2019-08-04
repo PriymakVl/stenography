@@ -21,6 +21,10 @@
             </li>  
         <? endif; ?> 
         <li><a href="#" id="pass_page">Перейти на страницу...</a></li>
-        <li><a href="#" id="play-sounds">Озвучить слова</a></li>
+        <? if ($this->get->delay): ?>
+            <li><a href="#" id="stop-sounds">Остановить озвучку</a></li>
+        <? else: ?>
+            <li><a href="#" id="play-sounds">Озвучить слова</a></li>
+        <? endif; ?>
     </ul>
 </div>

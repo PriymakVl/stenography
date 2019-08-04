@@ -18,8 +18,7 @@
     <? include_once('./views/total/message.php'); ?>
 	
     <!-- term list -->
-    <? if ($type == Term::TYPE_WORD) include_once('words.php'); ?>
-    <? if ($type == Term::TYPE_PHRASE) include_once('fhrase.php'); ?>
+    <? include_once('terms.php'); ?>
 	
 	<!-- menu -->
     <? include_once('menu.php'); ?>
