@@ -53,7 +53,7 @@ function go_page(delay)
 {
     var page = new URL(location).searchParams.get("page") || 1;
     page++;
-    location.href = 'http://stenography/term/list?page=' + page + '&delay=' + delay; 
+    location.href = '/term/list?page=' + page + '&delay=' + delay; 
 }
 
 

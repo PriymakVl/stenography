@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Авг 04 2019 г., 21:35
+-- Время создания: Авг 05 2019 г., 11:08
 -- Версия сервера: 5.5.53-log
 -- Версия PHP: 5.6.29
 
@@ -2627,7 +2627,22 @@ INSERT INTO `visits` (`id`, `type`, `date`) VALUES
 (84, 'main', '1564943110'),
 (85, 'main', '1564943282'),
 (86, 'main', '1564943461'),
-(87, 'main', '1564943578');
+(87, 'main', '1564943578'),
+(88, 'main', '1564987341'),
+(89, 'main', '1564989032'),
+(90, 'main', '1564990974'),
+(91, 'main', '1564991424'),
+(92, 'main', '1564991467'),
+(93, 'main', '1564991479'),
+(94, 'main', '1564991506'),
+(95, 'main', '1564991953'),
+(96, 'main', '1564991958'),
+(97, 'main', '1564992217'),
+(98, 'main', '1564992231'),
+(99, 'main', '1564992266'),
+(100, 'main', '1564992283'),
+(101, 'main', '1564992307'),
+(102, 'main', '1564992335');
 
 --
 -- Индексы сохранённых таблиц
@@ -2736,7 +2751,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `visits`
 --
 ALTER TABLE `visits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

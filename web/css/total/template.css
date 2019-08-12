@@ -110,6 +110,20 @@ input[type="text"] {
     display: none;
 }
 
+.main-page {
+    padding-left: 20px;
+}
+
+.main-page p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-indent: 20px;
+}
+
+.main-page ul, .main-page ol {
+    margin-left: 20px;
+}
+
 
 
 

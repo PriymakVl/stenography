@@ -14,6 +14,16 @@
     <script src="/web/js/jquery-ui.js"></script>
 </head>
 <body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36891583-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-36891583-2');
+</script>
+
     <div id="container">
         <!-- main menu -->
         <? include_once('./views/total/main_menu.php'); ?>
