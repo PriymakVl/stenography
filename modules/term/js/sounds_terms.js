@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $('#stop-sounds').click(function() {
         var page = new URL(location).searchParams.get("page") || 1;
-        location.href = 'http://stenography/term/list?page=' + page;
+        location.href = '/term/list?page=' + page;
     });
 });
 

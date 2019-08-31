@@ -2,6 +2,16 @@
 
 class ObjectHelper {
 
+	public static function plant($items, $class_name)
+	{
+		$objects = [];
+		if (empty($items)) return $objects;
+		foreach ($items as $data) {
+			$objects[] = (new $class_name)->setData($data);
+		}
+		return $objects;
+	}
+
     public static function factory($items, $class_name, $methods = false)
     {
         $objects = [];

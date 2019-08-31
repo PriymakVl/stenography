@@ -22,10 +22,11 @@ trait RuleModel {
 		return self::perform($sql, ['status' => STATUS_ACTIVE])->fetchAll();
 	}
 
-	public function selectByIdCategory()
+	public function selectByIdCategory($id_cat = false)
 	{
+		$id_cat = $id_cat ? $id_cat : $this->get->id_cat;
 		$sql = 'SELECT * FROM `rules` WHERE `status` = :status AND `id_cat` = :id_cat ORDER BY `number`';
-		return self::perform($sql, ['status' => STATUS_ACTIVE, 'id_cat' => $this->get->id_cat])->fetchAll();
+		return self::perform($sql, ['status' => STATUS_ACTIVE, 'id_cat' => $id_cat])->fetchAll();
 	}
 
 }

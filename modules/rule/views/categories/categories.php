@@ -10,7 +10,7 @@
                     <?=$cat->number?>
                 </td>
 				<td class="left">
-					<a href="/rule/list?id_cat=<?=$cat->id?>"><?=$cat->name?></a>
+					<a href="/rule/list?id_cat=<?=$cat->id?>"><?=$cat->name?> <span class="green">(<?=$cat->countRules()?>)</span></a>
 				</td>
             </tr>
         <? endforeach; ?>

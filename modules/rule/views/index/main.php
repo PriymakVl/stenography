@@ -25,4 +25,5 @@
 
 <!-- js files -->
 <script src="/modules/rule/js/delete_rule.js"></script>
+<script src="/modules/rule/js/show_examples.js"></script>
 

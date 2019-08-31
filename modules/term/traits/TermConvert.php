@@ -22,7 +22,7 @@ trait TermConvert {
 			case self::TYPE_PREFIX_WORD: return 'приставка или предлог';
 			case self::TYPE_END_WORD: return 'окончание слова';
 			case self::TYPE_NAME: return 'собственное имя';
-			case self::TYPE_END_NUMBER: return 'число';
+			case self::TYPE_NUMBER: return 'число';
 			default: return 'неизвестно';
 		}
 	}

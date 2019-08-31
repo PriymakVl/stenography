@@ -1,3 +1,19 @@
 .list-rules {
 	margin-bottom: 50px;
 }
+
+.rule-text ol{
+	margin-left: 15px;
+}
+
+.rule-text ol li {
+	line-height: 25px;
+}
+
+.rule-text a {
+	text-decoration: none;
+}
+
+.rule-text a:hover {
+	text-decoration: underline;
+}

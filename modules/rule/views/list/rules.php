@@ -9,7 +9,7 @@
                 <td>
                     <?=$rule->number?>
                 </td>
-				<td class="left">
+				<td class="left rule-text">
 					<a href="/rule?id_rule=<?=$rule->id?>"><?=$rule->text?></a>
 				</td>
             </tr>

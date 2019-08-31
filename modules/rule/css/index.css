@@ -1,0 +1,8 @@
+.rule-examples div {
+	border-bottom: 1px solid grey;
+	min-height: 50px;
+}
+
+.rule-text ol{
+	margin-left: 20px;
+}

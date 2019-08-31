@@ -20,28 +20,11 @@
 	<tr>
 		<td>3</td>
 		<td>Текст</td>
-		<td class="left">
+		<td class="left rule-text">
 			<?=$rule->text?>
 		</td>
 	</tr>
 	<!-- exemples -->
-	<tr>
-		<td>4</td>
-		<td>Примеры</td>
-		<td class="left">
-			<? if ($rule->examples): ?>
-				<? foreach ($rule->examples as $example): ?>
-					<span><?=$example->name?></span>&nbsp; &nbsp; 
-					<? if ($example->images): ?>
-						<? foreach ($example->images as $img): ?>
-							<img height="50" src="/terms/<?=$img->file?>">
-						<? endforeach; ?>
-						<hr>
-					<? endif; ?>
-				<? endforeach; ?>
-			<? else: ?>
-				<span class="red">Нет</span>
-			<? endif; ?>
-		</td>
-	</tr>
+	<? include 'exemples.php'; ?>
+	
 </table>

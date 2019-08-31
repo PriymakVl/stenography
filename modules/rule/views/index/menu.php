@@ -11,5 +11,7 @@
                 <a href="/rule/add_examples?id_rule=<?=$rule->id?>">Добавить примеры</a>
             </li>
         <? endif; ?>
+        <li><a href="#" id="hide-images">Скрыть изображ.</a></li>
+        <li><a href="#" id="hide-words">Скрыть слова</a></li>
     </ul>
 </div>

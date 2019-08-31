@@ -48,10 +48,8 @@ function autoload_module($class_name)
 function autoload_model($class_name)
 {
 	switch($class_name) {
-		case 'RuleExample': return require './models/RuleExample.php';
 		case 'User': return require './models/User.php';
 		case 'Visit': return require './models/Visit.php';
-		case 'RuleCategory': return require './models/RuleCategory.php';
 	}
 }
 
