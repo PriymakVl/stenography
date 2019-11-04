@@ -28,7 +28,8 @@ class Controller_Rule extends Controller_Base {
 	public function action_index()
 	{
 		$rule = (new Rule)->setData($this->get->id_rule)->getExamples()->getCategory();
-		$this->render('index/main', compact('rule'));
+		$sounds = (new Term)->getSounds($rule->examples);
+		$this->render('index/main', compact('rule', 'sounds'));
 	}
 
 	public function action_add()

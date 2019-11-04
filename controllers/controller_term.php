@@ -70,7 +70,7 @@ class Controller_Term extends Controller_Base {
 	public function action_search()
 	{
 		$terms = (new Term)->search();
-		if (!$terms) return $this->setMessage('error', 'search_error')->redirectPrevious();
+		if (!$terms) return $this->setMessage('danger', 'search_error')->redirectPrevious();
 		if (count($terms) == 1) return $this->setMessage('success', 'search_one')->redirect('term?id_term='.$terms[0]->id);
 		$this->setMessage('success', 'search_many')->render('search/main', compact('terms'));
 	}

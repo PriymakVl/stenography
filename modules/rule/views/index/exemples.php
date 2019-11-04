@@ -18,3 +18,6 @@
 		<? endif; ?>
 	</td>
 </tr>
+
+<!-- sounds -->
+<span id="sounds" data-list="<?=$sounds?>"></span>
