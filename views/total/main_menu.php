@@ -6,9 +6,36 @@
         <li>
             <a href="/rule/category">Правила</a>
         </li>
-        <!-- Тренажеры -->
+        <!-- Words -->
         <li class="drop">
-            <a href="#">Тренажер</a>
+            <a href="#">Слова</a>
+            <div class="dropdownContain">
+                <div class="dropOut">
+                    <div class="triangle"></div>
+                    <ul>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_WORD?>">Слова</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_SHORT_WORD?>">Короткие слова</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_REPEAT_WORD?>">Повтор. слова</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_PHRASE?>">Фразеограммы</a>
+                        </li>
+                        <li>
+                            <a href="/term/select?type=<?=Term::TYPE_SENTENSE?>">Предложения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+
+        <!-- Letter -->
+        <li class="drop">
+            <a href="#">Буквы</a>
             <div class="dropdownContain">
                 <div class="dropOut">
                     <div class="triangle"></div>
@@ -27,21 +54,6 @@
                         </li>
                         <li>
                             <a href="/term/select?type=<?=Term::TYPE_END_WORD?>">Окончания</a>
-                        </li>
-                        <li>
-                            <a href="/term/select?type=<?=Term::TYPE_WORD?>">Слова</a>
-                        </li>
-                        <li>
-                            <a href="/term/select?type=<?=Term::TYPE_SHORT_WORD?>">Короткие слова</a>
-                        </li>
-                        <li>
-                            <a href="/term/select?type=<?=Term::TYPE_REPEAT_WORD?>">Повтор. слова</a>
-                        </li>
-                        <li>
-                            <a href="/term/select?type=<?=Term::TYPE_PHRASE?>">Фразеограммы</a>
-                        </li>
-                        <li>
-                            <a href="/term/select?type=<?=Term::TYPE_SENTENSE?>">Предложения</a>
                         </li>
                     </ul>
                 </div>
