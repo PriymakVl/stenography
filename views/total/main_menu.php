@@ -70,5 +70,8 @@
             <a href="/main/logout">Выйти</a>
         </li>
         <? endif; ?>
+        <li>
+            <a href="/term/make_sentense">Создать предложение</a>
+        </li>
     </ul>
 </nav>

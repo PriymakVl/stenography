@@ -12,7 +12,7 @@ class Controller_Term extends Controller_Base {
 	
 	public function action_list()
 	{
-		$show_qty = 5;
+		$show_qty = 15;
 		$obj = new Term;
 		$terms = $obj->getList($show_qty);
 		$sounds = $obj->getSounds($terms);
@@ -74,9 +74,14 @@ class Controller_Term extends Controller_Base {
 		if (count($terms) == 1) return $this->setMessage('success', 'search_one')->redirect('term?id_term='.$terms[0]->id);
 		$this->setMessage('success', 'search_many')->render('search/main', compact('terms'));
 	}
-	
-	
 
-    
+	public function action_make_sentense()
+	{
+		if (!$this->post->sentense) return $this->render('sentense/main');
+		$sentense_str = $this->post->sentense;
+		$sentense_arr = (new Term)->makeSentense($this->post->sentense);
+		return $this->render('sentense/main', compact('sentense_arr', 'sentense_str'));
+	}
+	
 	
 }
