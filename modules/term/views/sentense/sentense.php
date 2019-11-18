@@ -19,6 +19,13 @@
 		<?= $sentense_str ?>
 	</h1>
 
+	<h2>Преобразованная строка</h2>
+	<h1>
+		<? foreach ($sentense_arr as $key => $value): ?>
+			<?= $key ?>&nbsp;
+		<? endforeach; ?>
+	</h1>
+
 
 	<h2>Результ</h2>
 	<p class="sentense-result">
