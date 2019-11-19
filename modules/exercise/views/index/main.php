@@ -14,7 +14,7 @@
    		 <? endif; ?>
     	<a href="/rule?id_rule=<?=($rule->id + 1)?>" class="preview">Следующее</a>
     </div>
-
+ 
 	<!-- info term -->
 	<? include_once('info.php'); ?>
 

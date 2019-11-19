@@ -37,6 +37,7 @@ class Term extends TermBase {
 	public function getSounds($terms)
 	{
 		foreach ($terms as $term) {
+			if ($term->type != self::TYPE_WORD) continue;;
 			$term->getSound();
 			if ($term->sound) $sounds[] = $term->sound->file;
 			else $sounds[] = '0.mp3';
